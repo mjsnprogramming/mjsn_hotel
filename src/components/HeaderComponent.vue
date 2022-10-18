@@ -41,7 +41,7 @@ a {
     display: flex;
     text-align: center;
     color: #597193;
-
+    z-index: 1 !important;
 }
 .rectangle {
     position: relative;

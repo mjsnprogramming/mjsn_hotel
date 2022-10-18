@@ -1,16 +1,19 @@
 <template>
-  <HeaderComponent></HeaderComponent>
+  
+  <HomeComponent></HomeComponent>
+  
 </template>
 
 <script>
-import HeaderComponent from './components/HeaderComponent.vue'
+import HomeComponent from './components/HomeComponent.vue'
 
 export default {
   name: 'App',
   components: {
-    HeaderComponent  
-  }
+    HomeComponent
 }
+}
+
 </script>
 
 <style lang = scss>
