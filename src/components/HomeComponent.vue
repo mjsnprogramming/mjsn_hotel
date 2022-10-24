@@ -1,13 +1,13 @@
 <template>
-        <div id = "at_the_top">
+    <div class = "atTheTop">
+        <div id = "page">
             <div id = "main">
-            <a href = "Home">
-            <div class = "rectangle"></div>
-            <div class = "rectangle"></div>
-            <div class = "rectangle"></div>
-            <span>HOTEL</span>
-            </a>
-
+                <a href = "Home">
+                    <div class = "rectangle"></div>
+                    <div class = "rectangle"></div>
+                    <div class = "rectangle"></div>
+                    <span>HOTEL</span>
+                </a>
             <ul>
                 <li><a href = "Home">Home</a></li>
                 <li><a href = "Branch">Branch</a></li>
@@ -16,9 +16,7 @@
                 <li><a href = "Pages">Pages</a></li>
                 <li><a href = "Blog">Blog</a></li>
             </ul>
-            
             <button id = "reservation">Reservation</button>
-            
         </div>
             <p>Discover a hotel<br> that defines a new <br>dimension of luxury</p>
             <p>Lorem ipsum is simply dummy text of the printing and <br>typesetting industry.
@@ -26,27 +24,27 @@
             </p>
             <button id = "started">Get Started</button>
             <button id = "watch">
-                <button id = "inside_watch"></button>
+            <button id = "inside_watch"></button>
             </button>
             <span id = "watch_video">Watch video</span>
-
             <div class = "circle"></div>
             <div class = "circle"></div>
             <div class = "circle"></div>
             <div class = "circle"></div>
             <div class = "circle_big"></div>
-
             <img :src = "hotel">
+            </div>
         </div>
 </template>
 
 <script>
 export default {
-data() {
-    return {
-        hotel: require('../assets/hotel.png')
+    name: 'atTheTop',
+    data() {
+        return {
+        hotel: require('../assets/images/hotel.png')
+        }
     }
-}
 }
 </script>
 
@@ -142,38 +140,37 @@ a {
     border-radius: 4px;
     color: #ffffff;
 }
-    #at_the_top {
-        width: 90%;
-        height: 775px;
-        background-color: #EAEFF6;
-        position: absolute;
-        left: 0;
-        top: 0;
-        z-index: 0!important;
-        overflow: hidden;
+#page {
+    width: 90%;
+    height: 775px;
+    background-color: #EAEFF6;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 0!important;
+    overflow: hidden;
     
-        p:nth-child(2) {
-            position: relative;
-            left: 300px;
-            top: 200px;
-            font-family: "open-sans", sans-serif;
-            font-weight: 600;
-            font-size: 45px;
-            line-height: 55px;
-            color: #3D4550;
-        }
-        p:nth-child(3) {
-            position: relative;
-            left: 300px;
-            top: 170px;
-            font-family: "average-sans", sans-serif;
-            font-weight: 400;
-            size: 18px;
-            line-height: 28px;
-            letter-spacing: 2%;
-            color: #939393;
-        }
-        
+p:nth-child(2) {
+    position: relative;
+    left: 300px;
+    top: 200px;
+    font-family: "open-sans", sans-serif;
+    font-weight: 600;
+    font-size: 45px;
+    line-height: 55px;
+    color: #3D4550;
+    }
+p:nth-child(3) {
+    position: relative;
+    left: 300px;
+    top: 170px;
+    font-family: "average-sans", sans-serif;
+    font-weight: 400;
+    size: 18px;
+    line-height: 28px;
+    letter-spacing: 2%;
+    color: #939393;
+    }  
     }
     #started {
         width: 137px;
@@ -229,5 +226,11 @@ a {
         left: 1100px;
         bottom: 300px;
     }
+.circle {
+    width: 10px;
+    height: 10px;
+    background-color: #C9D6E9;
+    border-radius: 360px;
+}
 
 </style>
