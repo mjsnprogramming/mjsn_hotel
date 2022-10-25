@@ -32,20 +32,142 @@
             <div class = "circle"></div>
             <div class = "circle"></div>
             <div class = "circle_big"></div>
-            <img :src = "hotel">
+            <img id = "hotelImg" :src = "hotel">
+            </div>
+            <div id = "availability">
+                <span>Check Availability</span>
+                <p>It is a long established fact that a reader will be distracted<br>
+                by the readable content of a page</p>
+                <img :src = "hotel2">
+                <div id = "chkAvailability">
+                    <label for = "checkIn">
+                        CHECK-IN
+                        <input type = "date" id = "checkIn" name = "checkIn"
+                        value = "" min = "2022-01-01" max = "2023-12-31">
+                    </label>
+                    <label for = "checkOut">
+                        CHECK-OUT
+                        <input type = "date" id = checkOut name = "checkOut"
+                        value = "" min = "2022-01-01" max = "2023-12-31">
+                    </label>
+                    <label for = "rooms">
+                        GUESTS:
+                        <select id = "rooms" name = "rooms">
+                            <option value = "1 room">1 room</option>
+                            <option value = "2 rooms">2 rooms</option>
+                            <option value = "3 rooms">3 rooms</option>
+                            <option value = "4 rooms">4 rooms</option>
+                        </select> 
+                    </label> 
+                    <button id = "availabilitySubmit">Check Availability</button>
+                </div>
+            </div>
+            <div id = "popularRooms">
+                <span>Our Most Popular Room</span>
+                <p>It is a long established fact that a reader will be distracted<br>
+                by the readable content of a page</p>
+            </div>
+            <div id = "deluxe">
+                <img :src = "deluxe">
+                <span>Deluxe Contrast Room</span>
+                <img :src = "resize">
+                <span>52 sqm</span>
+                <img :src = "bed">
+                <span>2 Bed</span>
+                <img :src = "bathroom">
+                <span>1 Bathroom</span>
+                <span>$200</span>
+                <span>/ Night</span> 
+            </div>
+            <div id = "luxury">
+                <img :src = "luxury">
+                <span>Deluxe Contrast Room</span>
+                <img :src = "resize">
+                <span>52 sqm</span>
+                <img :src = "bed">
+                <span>2 Bed</span>
+                <img :src = "bathroom">
+                <span>1 Bathroom</span>
+                <span>$250</span>
+                <span>/ Night</span> 
+            </div>
+            <div id = "single">
+                <img :src = "single">
+                <span>Deluxe Contrast Room</span>
+                <img :src = "resize">
+                <span>52 sqm</span>
+                <img :src = "bed">
+                <span>2 Bed</span>
+                <img :src = "bathroom">
+                <span>1 Bathroom</span>
+                <span>$250</span>
+                <span>/ Night</span> 
+            </div>
+            <div id = "services">
+                <span>OUR SERVICES</span>
+                <span>Hotel Facilities</span>
+                <div id = "pickUp" class = "facilities">
+                    <span>Pick up & Drop</span>
+                    <img :src = "pickUpCar">
+                    <p>It is a long established fact that a reader will be distracted<br>
+                by the readable content of a page</p>
+                </div>
+                <div id = "parkingSpace" class = "facilities">
+                    <span>Parking Space</span>
+                    <img :src = "parkingCar">
+                    <p>Lorem Ipsum is simply dummy text of the printing typersetting industry</p>
+                </div>
+                <div id = "roomServices" class = "facilities">
+                    <span>Room Services</span>
+                    <img :src = "roomServices">
+                    <p>It is a long established fact that a reader will be distracted<br>
+                by the readable content of a page</p>
+                </div>
+                <div id = "swimmingPool" class = "facilities">
+                    <span>Swimming Pool</span>
+                    <img :src = "swimmingPool">
+                    <p>Lorem Ipsum is simply dummy text of the printing typersetting industry</p>
+                </div>
+                <div id = "fibreInternet" class = "facilities">
+                    <span>Fibre Internet</span>
+                    <img :src = "internet">
+                    <p>It is a long established fact that a reader will be distracted<br>
+                by the readable content of a page</p>
+                </div>
+                <div id = "breakfast" class = "facilities">
+                    <span>Breakfast</span>
+                    <img :src = "breakfast">
+                    <p>Lorem Ipsum is simply dummy text of the printing typersetting industry</p>
+                </div>
             </div>
         </div>
 </template>
 
 <script>
 export default {
-    name: 'atTheTop',
-    data() {
+    data() {   
         return {
-        hotel: require('../assets/images/hotel.png')
+        hotel: require('../assets/images/hotel.png'),
+        hotel2: require('../assets/images/hotel2.png'),
+        deluxe: require('../assets/images/deluxe.png'),
+        luxury: require('../assets/images/luxury.png'),
+        single: require('../assets/images/single.png'),
+        resize: require('../assets/images/resize.png'),
+        bed: require('../assets/images/bed.png'),
+        bathroom: require('../assets/images/bathroom.png'),
+        pickUpCar: require('../assets/images/pickUpCar.png'),
+        parkingCar: require('../assets/images/parkingCar.png'),
+        roomServices: require('../assets/images/roomServices.png'),
+        swimmingPool: require('../assets/images/swimmingPool.png'),
+        internet: require('../assets/images/internet.png'),
+        breakfast: require('../assets/images/breakfast.png')    
         }
-    }
-}
+    },
+    mounted()  {
+        document.querySelector('#checkIn').value = new Date();
+        document.querySelector('#checkOut').value = new Date() + 1;
+    }}
+
 </script>
 
 <style lang = scss>
@@ -226,11 +348,31 @@ p:nth-child(3) {
         left: 1100px;
         bottom: 300px;
     }
+ #hotelImg {
+    z-index: 2 !important;
+ }   
 .circle {
     width: 10px;
     height: 10px;
     background-color: #C9D6E9;
     border-radius: 360px;
 }
+#availability {
+    position: absolute;
+    top: 1200px;
+}
+#popularRooms {
+    position: absolute;
+    top: 1800px;
+}
+#deluxe {
+    position: absolute;
+    top: 2000px;
+}
+#services {
+    position: absolute;
+    top: 2400px;
+}
+
 
 </style>
