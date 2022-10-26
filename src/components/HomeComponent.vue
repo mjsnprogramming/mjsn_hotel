@@ -1,44 +1,33 @@
 <template>
     <div class = "atTheTop">
+        <HeaderComponent></HeaderComponent>
         <div id = "page">
-            <div id = "main">
-                <a href = "Home">
-                    <div class = "rectangle"></div>
-                    <div class = "rectangle"></div>
-                    <div class = "rectangle"></div>
-                    <span>HOTEL</span>
-                </a>
-            <ul>
-                <li><a href = "Home">Home</a></li>
-                <li><a href = "Branch">Branch</a></li>
-                <li><a href = "Search">Search</a></li>
-                <li><a href = "About Us">About Us</a></li>
-                <li><a href = "Pages">Pages</a></li>
-                <li><a href = "Blog">Blog</a></li>
-            </ul>
-            <button id = "reservation">Reservation</button>
-        </div>
             <p>Discover a hotel<br> that defines a new <br>dimension of luxury</p>
             <p>Lorem ipsum is simply dummy text of the printing and <br>typesetting industry.
                 Lorem ipsum has been the industry's<br> standard dummy.
             </p>
-            <button id = "started">Get Started</button>
-            <button id = "watch">
-            <button id = "inside_watch"></button>
-            </button>
-            <span id = "watch_video">Watch video</span>
+            <div id = "getStarted">
+                <button id = "startedButton">Get Started</button>
+                <button id = "watchButton"></button>
+                <div id = "insideWatch"></div>
+                <span id = "watchVideo">Watch video</span>
+            </div>
             <div class = "circle"></div>
             <div class = "circle"></div>
             <div class = "circle"></div>
             <div class = "circle"></div>
+            <div id = "circleBig">
             <div class = "circle_big"></div>
             <img id = "hotelImg" :src = "hotel">
+            </div>
             </div>
             <div id = "availability">
                 <span>Check Availability</span>
                 <p>It is a long established fact that a reader will be distracted<br>
                 by the readable content of a page</p>
+                <div id = "hotelImgAvailability">
                 <img :src = "hotel2">
+                </div>
                 <div id = "chkAvailability">
                     <label for = "checkIn">
                         CHECK-IN
@@ -140,11 +129,116 @@
                     <p>Lorem Ipsum is simply dummy text of the printing typersetting industry</p>
                 </div>
             </div>
+            <div id = "numbers">
+                <span>302 +</span>
+                <span>Room & Suites</span>
+                <hr>
+                <span>25</span>
+                <span>Restaurant</span>
+                <hr>
+                <span>510+</span>
+                <span>Exceptional Food</span>
+                <hr>
+                <span>65</span>
+                <span>Destination</span>
+            </div>
+            <div id = "history">
+                <span>Discover Our History</span>
+                <p>Lorem ipsum is ismply dummy text of the printing and<br>
+                typersetting industry. Lorem Ipsum has been the industry's<br>
+                standard dummy</p>
+                <p>There are many variations of passages of Lorem Ipsum<br>
+                available, but the majority have suffered alteration in some<br>
+                form, by injected humour, or randomised words which don't<br>
+                look even slightly believable</p>
+                <button id = "explore">Explore More</button>
+                <button id = "playVideo"></button>
+                <span>Watch video</span>
+                <iframe></iframe>
+            </div>
+            <div id = "customers">
+                <span>Our Happy Customers</span>
+                <p>Know about our clients, we are a worldwide corporate brand</p>
+                <div class = "comment">
+                    <img :src = "warren">
+                    <span>Wade Warren</span>
+                    <span>Louis Vuitton</span>
+                    <p>Necessary to deliver white glove<br>
+                       fully managed campgaigns that surpass<br>
+                       industry benchmarks. Take your career<br>
+                       to next level</p>
+                </div>
+                <div class = "comment">
+                    <img :src = "florise">
+                    <span>Albert Florise</span>
+                    <span>Nintendo</span>
+                    <p>Necessary to deliver white glove<br>
+                       fully managed campgaigns that surpass<br>
+                       industry benchmarks. Take your career<br>
+                       to next level</p>
+                </div>
+                <div class = "comment">
+                    <img :src = "wilson">
+                    <span>Wade Warren</span>
+                    <span>Louis Vuitton</span>
+                    <p>Necessary to deliver white glove<br>
+                       fully managed campgaigns that surpass<br>
+                       industry benchmarks. Take your career<br>
+                       to next level</p>
+                </div>
+            </div>
+            <div id = "blog">
+                <span>HOTEL BLOG</span>
+                <span>Our News</span>
+
+                <div id = "travelWithMap">
+                    <img :src = "map">
+                    <img :src = "worldMini">
+                    <span>Travel</span>
+                    <img :src = "commentMini">
+                    <span>2 Comment</span>
+                    <span>How To Travel With Map</span>
+                    <p>Lorem Ipsum is simply dummy text of<br> the printing and typersetting industry </p>
+                    <span>Read More</span>
+                    <img :src = "arrowMini">
+                </div>
+                <div id = "travelWithMap">
+                    <img :src = "single2">
+                    <img :src = "worldMini">
+                    <span>Travel</span>
+                    <img :src = "commentMini">
+                    <span>2 Comment</span>
+                    <span>Single Contrast Room</span>
+                    <p>Lorem Ipsum is simply dummy text of<br> the printing and typersetting industry </p>
+                    <span>Read More</span>
+                    <img :src = "arrowMini">
+                </div>
+                <div id = "travelWithMap">
+                    <img :src = "luxury2">
+                    <img :src = "worldMini">
+                    <span>Travel</span>
+                    <img :src = "commentMini">
+                    <span>2 Comment</span>
+                    <span>Luxury Twin Room</span>
+                    <p>Lorem Ipsum is simply dummy text of<br> the printing and typersetting industry </p>
+                    <span>Read More</span>
+                    <img :src = "arrowMini">
+                </div>
+            </div>
+            <div id = "subscribe">
+                <span>Stay in Touch</span>
+                <p>Signup to receive news and<br>
+                   updates from our hotel</p>
+                <input type = "email" id = "email" placeholder = "Enter Your Email Address">
+                <button id = "subscribe">subscribe</button>
+            </div>
         </div>
 </template>
 
 <script>
+import HeaderComponent from './HeaderComponent.vue';
 export default {
+    
     data() {   
         return {
         hotel: require('../assets/images/hotel.png'),
@@ -160,8 +254,20 @@ export default {
         roomServices: require('../assets/images/roomServices.png'),
         swimmingPool: require('../assets/images/swimmingPool.png'),
         internet: require('../assets/images/internet.png'),
-        breakfast: require('../assets/images/breakfast.png')    
+        breakfast: require('../assets/images/breakfast.png'),
+        warren: require('../assets/images/warren.jpg'),
+        florise: require('../assets/images/florise.png'),
+        wilson: require('../assets/images/wilson.png'),
+        map: require('../assets/images/map.png'),
+        worldMini: require('../assets/images/worldMini.png'),
+        arrowMini: require('../assets/images/arrowMini.png'),
+        commentMini: require('../assets/images/commentMini.png'),
+        single2: require('../assets/images/single2.png'),
+        luxury2: require('../assets/images/luxury2.png')    
         }
+    },
+    components: {
+        HeaderComponent
     },
     mounted()  {
         document.querySelector('#checkIn').value = new Date();
@@ -171,121 +277,51 @@ export default {
 </script>
 
 <style lang = scss>
+$openSans: "Open Sans", sans-serif;
+$averageSans: "Average Sans", sans-serif;
+@mixin openSans() {
+    position: absolute;
+    font-family: $openSans;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 26px;
+}
+@mixin circles() {
+    position: absolute;
+    background-color: #C9D6E9;
+    border-radius: 360px;
+}
+#page,
+#getStarted {
+    position: absolute;
+    p:nth-child(1),
+    p:nth-child(2) {
+        position: absolute;
+    }
+}
 a {
     text-decoration: none;
 }
-#main {
-    width: 1110px;
-    height: 56px;
-    margin-top: 20px;
-    background-color: #EAEFF6;
-    margin-left: auto;
-    margin-right: auto;
-    display: flex;
-    text-align: center;
-    color: #353637;
-    z-index: 1!important;
-}
-.rectangle {
-    position: relative;
-    margin-bottom: 0;
-}
-.rectangle:nth-child(1) {
-    height: 46px;
-    width: 10px;
-    background-color: #AAC7F0;
-    float: left;
-    margin-top: 10px;
-    align-self: flex-end;
-    clip-path: polygon(100% 21%, 100% 100%, 0 100%, 0 0);
-    cursor: pointer;
-}
-.rectangle:nth-child(2) {
-    height: 28px;
-    width: 10px;
-    background-color: #597193;
-    margin-top: 28px;
-    float: left;
-    align-self: flex-end;
-    clip-path: polygon(100% 31%, 100% 100%, 0 100%, 0 0);
-    cursor: pointer;
-}
-.rectangle:nth-child(3) {
-    height: 34px;
-    width: 10px;
-    background-color: #353637;
-    margin-top: 22px;
-    float: left;
-    align-self: flex-end;
-    clip-path: polygon(100% 21%, 100% 100%, 0 100%, 0 0);
-    cursor: pointer;
-}
-#main span {
-    position: relative;
-    width: 87px;
-    height: 34px;
-    left: 10px;
-    top: 32px;
-    color: #597193;
-    font-size: 25px;
-    cursor: pointer;
-}
-#main ul {
-    position: relative;
-    left: 100px;
-    margin-top: 32px;
-    
-}
-#main ul li {
-    text-decoration: none;
-    display: inline-block;
-    font-size: 18px;
-    font-family: 'Average Sans', sans-serif;
-    font-weight: 400;
-    line-height: 26px;
-    letter-spacing: 2%;
-    margin-left: 50px;
-}
-#main ul li a {
-    color: #353637;
-}
-#main button {
-
-    width: 135px;
-    height: 40px;
-    position: relative;
-    top: 5px;
-    left: 199px;
-    cursor: pointer;
-    background-color: #597193;
-    border: solid 1px transparent;
-    border-radius: 4px;
-    color: #ffffff;
-}
 #page {
     width: 90%;
-    height: 775px;
+    height: 705px;
     background-color: #EAEFF6;
-    position: absolute;
     left: 0;
-    top: 0;
-    z-index: 0!important;
+    top: 76px;
     overflow: hidden;
     
-p:nth-child(2) {
-    position: relative;
-    left: 300px;
-    top: 200px;
+p:nth-child(1) {
+    left: 10%;
+    top: 194px;
     font-family: "open-sans", sans-serif;
     font-weight: 600;
     font-size: 45px;
     line-height: 55px;
     color: #3D4550;
     }
-p:nth-child(3) {
-    position: relative;
-    left: 300px;
-    top: 170px;
+p:nth-child(2) {
+    left: 10%;
+    top: 393px;
     font-family: "average-sans", sans-serif;
     font-weight: 400;
     size: 18px;
@@ -293,86 +329,159 @@ p:nth-child(3) {
     letter-spacing: 2%;
     color: #939393;
     }  
+    .circle:nth-child(1) {
+    @include circles;
+    width: 10px;
+    height: 10px;
+    left: 534.72px;
+    top: 589px;
+}
+.circle:nth-child(2) {
+    @include circles;
+    width: 21px;
+    height: 21px;
+    top: 194px;
+    left: 717.58px;
+    
+}
+.circle:nth-child(3) {
+    @include circles;
+    width: 41px;
+    height: 41px;
+    top: 99px;
+    left: 1205.52px;
+    
+}
+.circle:nth-child(4) {
+    @include circles;
+    width: 27px;
+    height: 27px;
+    top: 598px;
+    left: 1236.84px;
+    
+}
     }
-    #started {
-        width: 137px;
+#getStarted {
+    width: 341.46px;
+    height: 40px;
+    left: 10%;
+    top: 513px;
+    
+    #startedButton {
+        @include openSans;
+        width: 136.38px;
         height: 40px;
-        color: #FFFFFF;
         background-color: #597193;
-        border-radius: 4px;
-        position: relative;
-        left: 300px;
-        top: 200px;
+        color: white;
         border: transparent;
-        cursor: pointer;
+        border-radius: 4px;
+        box-shadow: 0px 4px 12px rgba(21, 21, 21, 0.15);
+        text-align: center;
+        left: 0;
+        top: 0;
+        cursor: pointer; 
     }
-    #watch {
+    #watchButton {
         width: 41px;
         height: 40px;
         border-radius: 360px;
         border: transparent;
-        position: relative;
-        left: 380px;
-        top: 215px;
+        position: absolute;
+        left: 190.94px;
         background-color: #597193;
         cursor: pointer;
     }
-    #inside_watch {
+    #insideWatch {
         width: 20px;
         height: 20px;
-        position: relative;
-        left: 352px;
-        top: 205px;
+        position: absolute;
+        left: 203.4px;
+        top: 10px;
         clip-path: polygon(0 0, 0% 100%, 99% 50%);
         border: transparent;
         cursor: pointer;
+        z-index: 1;
+        background-color: #EAEFF6;
     }
-    #watch_video {
-        font-size: 16px;
-        line-height: 26px;
-        letter-spacing: 2%;
+    #watchVideo {
+        @include openSans;
         font-weight: 400;
-        font-family: "open-sans", sans-serif;
         color: #353637;
-        position: relative;
-        left: 380px;
-        top: 202px;
+        left: 242.46px;
+        top: 7px;
     }
+}
+#circleBig {
+    width: 544.52px;
+    height: 600px;
+    position: absolute;
+    left: 52%;
+    top: 99px;
+
     .circle_big {
         width: 540px;
         height: 540px;
         background-color: #F6FCFA;
         border-radius: 360px;
         border: 1px solid black;
-        position: relative;
-        left: 1100px;
-        bottom: 300px;
+        position: absolute;
+        left: 0;
+        top: 0;
     }
- #hotelImg {
-    z-index: 2 !important;
+    #hotelImg {
+        z-index: 2 !important;
+        position: absolute;
+        top: 41px;
+        left: 125.27px;
+        width: 323.28px;
+        height: 569px;
  }   
-.circle {
-    width: 10px;
-    height: 10px;
-    background-color: #C9D6E9;
-    border-radius: 360px;
 }
+
 #availability {
     position: absolute;
-    top: 1200px;
+    top: 896px;
+    display: block;
+    margin: 0 auto;
+    width: 1112.17px;
+    height: 694px;
+    background-color: #3D4550;
+    span {
+        @include openSans;
+        top: 0;
+        font-size: 45px !important;
+        line-height: 55px !important;
+        text-align: center;
+        color: #353637;
+        display: block;
+        text-align: center;
+        margin: 0 auto;
+    }
+    p {
+        font-family: $averageSans;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 28px;
+        letter-spacing: 0.02em;
+        background-color: #959595;
+    }
+    
 }
-#popularRooms {
-    position: absolute;
-    top: 1800px;
+#hotelImgAvailability {
+    background-color: #B1BED0;
+    width: 637px;
+    height: 523px;
+    z-index: 0;
+    img {
+        width: 637px;
+        height: 523px;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        z-index: 1;
+    }
 }
-#deluxe {
-    position: absolute;
-    top: 2000px;
-}
-#services {
-    position: absolute;
-    top: 2400px;
-}
+
 
 
 </style>

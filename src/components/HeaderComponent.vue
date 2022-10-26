@@ -1,12 +1,13 @@
 <template>
         <div id = "main">
+            <div id = "logoAndList">
             <a href = "Home">
             <div class = "rectangle"></div>
             <div class = "rectangle"></div>
             <div class = "rectangle"></div>
             <span>HOTEL</span>
             </a>
-
+            </div>
             <ul>
                 <li><a href = "Home">Home</a></li>
                 <li><a href = "Branch">Branch</a></li>
@@ -32,16 +33,20 @@ a {
     text-decoration: none;
 }
 #main {
-    width: 1110px;
-    height: 56px;
-    margin-top: 20px;
-    background-color: #FFFFFF;
-    margin-left: auto;
-    margin-right: auto;
+    width: 90%;
+    height: 76px;
+    background-color: #EAEFF6;
+    position: absolute;
+    left: 0;
+    top: 0;
     display: flex;
     text-align: center;
     color: #597193;
-    z-index: 1 !important;
+}
+#logoAndList {
+    position: absolute;
+    top: 20px;
+    left: 12%;
 }
 .rectangle {
     position: relative;
@@ -77,23 +82,23 @@ a {
     clip-path: polygon(100% 21%, 100% 100%, 0 100%, 0 0);
     cursor: pointer;
 }
-#main span {
-    position: relative;
+#logoAndList span {
+    position: absolute;
     width: 87px;
     height: 34px;
-    left: 10px;
+    left: 39.40px;
     top: 32px;
     color: #597193;
     font-size: 25px;
     cursor: pointer;
 }
 #main ul {
-    position: relative;
-    left: 100px;
+    left: 25%;
     margin-top: 32px;
+    position: relative;
     
 }
-#main ul li {
+#main  ul li {
     text-decoration: none;
     display: inline-block;
     font-size: 18px;
@@ -106,13 +111,12 @@ a {
 #main ul li a {
     color: #597193;
 }
-#main button {
-
+#reservation {
     width: 135px;
     height: 40px;
-    position: relative;
-    top: 5px;
-    left: 199px;
+    position: absolute;
+    top: 36px;
+    left: 80%;
     cursor: pointer;
     background-color: #597193;
     border: solid 1px transparent;
