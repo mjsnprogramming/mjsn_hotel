@@ -48,14 +48,14 @@
                             <option value = "4 rooms">4 rooms</option>
                         </select> 
                     </label> 
-                    <button id = "availabilitySubmit">Check Availability</button>
+                    <button id = "availabilitySubmit">CHECK AVAILABILITY</button>
                 </div>
             </div>
             <div id = "popularRooms">
                 <span>Our Most Popular Room</span>
                 <p>It is a long established fact that a reader will be distracted<br>
                 by the readable content of a page</p>
-            </div>
+            
             <div id = "deluxe">
                 <img :src = "deluxe">
                 <span>Deluxe Contrast Room</span>
@@ -91,6 +91,7 @@
                 <span>1 Bathroom</span>
                 <span>$250</span>
                 <span>/ Night</span> 
+            </div>
             </div>
             <div id = "services">
                 <span>OUR SERVICES</span>
@@ -291,6 +292,25 @@ $averageSans: "Average Sans", sans-serif;
     background-color: #C9D6E9;
     border-radius: 360px;
 }
+@mixin checkInLabel() {
+    @include openSans;
+        line-height: 55px !important;
+        letter-spacing: 0.03em;
+        color: #222426;
+        left: 68px;
+}
+@mixin checkInInputs() {
+        @include openSans;
+        font-size: 16px !important;
+        line-height: 55px;
+        box-sizing: border-box;
+        width: 339px;
+        height: 50px;
+        border: 1px solid #ABABAB;
+        border-radius: 2px;
+        left: 0px;
+        background-color: #F6FCFA;
+}
 #page,
 #getStarted {
     position: absolute;
@@ -439,22 +459,22 @@ p:nth-child(2) {
 }
 
 #availability {
-    position: absolute;
+    position: relative;
     top: 896px;
     display: block;
+    text-align: center;
+    align-items: center;
     margin: 0 auto;
     width: 1112.17px;
     height: 694px;
-    background-color: #3D4550;
     span {
         @include openSans;
         top: 0;
         font-size: 45px !important;
         line-height: 55px !important;
-        text-align: center;
         color: #353637;
+        position: relative;
         display: block;
-        text-align: center;
         margin: 0 auto;
     }
     p {
@@ -463,7 +483,7 @@ p:nth-child(2) {
         font-size: 18px;
         line-height: 28px;
         letter-spacing: 0.02em;
-        background-color: #959595;
+        color: #959595;
     }
     
 }
@@ -472,16 +492,67 @@ p:nth-child(2) {
     width: 637px;
     height: 523px;
     z-index: 0;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    border-radius: 8px 0px 0px 8px;;
     img {
         width: 637px;
-        height: 523px;
+        height: 434px;
         position: absolute;
         left: 0;
         bottom: 0;
         z-index: 1;
     }
 }
-
+#chkAvailability {
+    width: 475.17px;
+    height: 523px;
+    position: absolute;
+    top: 171px;
+    left: 637px;
+    background-color: #F6FCFA;
+    border-radius: 0px 8px 8px 0px;
+    label:nth-child(1) {
+        @include checkInLabel;
+        top: 77px;
+    }
+    #checkIn {
+        @include checkInInputs;
+        top: 53px;
+    }
+    label:nth-child(2) {
+        @include checkInLabel;
+        top: 182px;
+    }
+    #checkOut {
+        @include checkInInputs;
+        top: 53px;
+    }
+    label:nth-child(3) {
+        @include checkInLabel;
+        top: 287px;
+    }
+    #rooms {
+        @include checkInInputs;
+        top: 53px;
+    }
+    #availabilitySubmit {
+        @include checkInInputs;
+        left: 68px;
+        top: 425px;
+        cursor: pointer;
+        line-height: 45px !important;
+    }
+}
+#popularRooms {
+    width: 1110px;
+    height: 602px;
+    position: relative;
+    margin: 0 auto;
+    top: 1018px;
+    background-color: #353637;
+}
 
 
 </style>
