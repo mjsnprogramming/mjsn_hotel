@@ -57,39 +57,39 @@
                 by the readable content of a page</p>
             
             <div id = "deluxe">
-                <img :src = "deluxe">
+                <img :src = "deluxe" id = "deluxeImg" class = "roomsImg">
                 <span>Deluxe Contrast Room</span>
-                <img :src = "resize">
+                <img :src = "resize" class = "resizeImg">
                 <span>52 sqm</span>
-                <img :src = "bed">
+                <img :src = "bed" class = "bedImg">
                 <span>2 Bed</span>
-                <img :src = "bathroom">
+                <img :src = "bathroom" class = "bathroomImg">
                 <span>1 Bathroom</span>
                 <span>$200</span>
                 <span>/ Night</span> 
             </div>
             <div id = "luxury">
-                <img :src = "luxury">
-                <span>Deluxe Contrast Room</span>
-                <img :src = "resize">
+                <img :src = "luxury" id = "luxuryImg" class = "roomsImg">
+                <span>Luxury Contrast Room</span>
+                <img :src = "resize" class = "resizeImg">
                 <span>52 sqm</span>
-                <img :src = "bed">
+                <img :src = "bed" class = "bedImg">
                 <span>2 Bed</span>
-                <img :src = "bathroom">
+                <img :src = "bathroom" class = "bathroomImg">
                 <span>1 Bathroom</span>
                 <span>$250</span>
                 <span>/ Night</span> 
             </div>
             <div id = "single">
-                <img :src = "single">
-                <span>Deluxe Contrast Room</span>
-                <img :src = "resize">
+                <img :src = "single" id = "singleImg" class = "roomsImg">
+                <span>Single Contrast Room</span>
+                <img :src = "resize" class = "resizeImg">
                 <span>52 sqm</span>
-                <img :src = "bed">
+                <img :src = "bed" class = "bedImg">
                 <span>2 Bed</span>
-                <img :src = "bathroom">
+                <img :src = "bathroom" class = "bathroomImg">
                 <span>1 Bathroom</span>
-                <span>$250</span>
+                <span>$280</span>
                 <span>/ Night</span> 
             </div>
             </div>
@@ -287,6 +287,7 @@ $averageSans: "Average Sans", sans-serif;
     font-size: 13px;
     line-height: 26px;
 }
+
 @mixin circles() {
     position: absolute;
     background-color: #C9D6E9;
@@ -310,6 +311,88 @@ $averageSans: "Average Sans", sans-serif;
         border-radius: 2px;
         left: 0px;
         background-color: #F6FCFA;
+}
+@mixin rooms() {
+        @include openSans;
+        height: 427px;
+        width: 350px;
+        position: absolute;
+        bottom: 0;
+        border: 1px solid #596B86;
+}
+@mixin roomsIcons() {
+        position: absolute;
+        top: 337px;
+}
+@mixin roomsMiniSpan() {
+        @include openSans;
+        font-weight: 300;
+        top: 331px;
+        color: #727272;
+
+}
+@mixin roomsDescription() {
+    .roomsImg {
+        width: 352px;
+        height: 264px;
+        position: absolute;
+        left: -1px;
+        bottom: 169px;
+    }
+    span:nth-child(2) {
+        @include openSans;
+        font-size: 24px;
+        line-height: 55px;
+        color: #131313;
+        top: 288px;
+        left: 22px;
+    }
+    .resizeImg {
+        @include roomsIcons;
+        width: 11.25px;
+        height: 12px;
+        left: 22px;
+    }
+    span:nth-child(4) {
+        @include roomsMiniSpan;
+        left: 38px;
+    }
+    .bedImg {
+        @include roomsIcons;
+        width: 17.77px;
+        height: 11.7px;
+        left: 98px;
+    }
+    span:nth-child(6) {
+        @include roomsMiniSpan;
+        left: 120.44px;
+    }
+    .bathroomImg {
+        @include roomsIcons;
+        width: 17.08px;
+        height: 11.87px;
+        left: 173.32px;
+    }
+    span:nth-child(8) {
+        @include roomsMiniSpan;
+        left: 195px;
+    }
+    span:nth-child(9) {
+        @include openSans;
+        font-size: 24px;
+        line-height: 55px;
+        top: 358px;
+        left: 22px;
+        color: #384D6C;
+    }
+    span:nth-child(10) {
+        @include openSans;
+        font-size: 18px;
+        line-height: 55px;
+        top: 360px;
+        left: 80px;
+        color: #585858;
+    }
 }
 #page,
 #getStarted {
@@ -551,7 +634,76 @@ p:nth-child(2) {
     position: relative;
     margin: 0 auto;
     top: 1018px;
-    background-color: #353637;
+    display: block;
+    text-align: center;
+    align-items: center;
+    span:nth-child(1) {
+        @include openSans;
+        font-size: 45px !important;
+        line-height: 55px;
+        color: #353637;
+        top: 0;
+        left: 293px;
+        display: block;
+        text-align: center;
+        align-items: center;
+    }
+    p {
+        font-family: $averageSans;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 28px;
+        letter-spacing: 0.02em;
+        color: #959595;
+        position: relative;
+        top: 73px;
+    }
+}
+#deluxe {
+    @include rooms;
+    left: 0;
+    @include roomsDescription;
+
+}
+#luxury {
+    @include rooms;
+    left: 380px;
+    @include roomsDescription;
+}
+#single {
+    @include rooms;
+    left: 760px;
+    @include roomsDescription;
+}
+#services {
+    width: 1110px;
+    height: 486px;
+    position: relative;
+    top: 1196px;
+    display: block;
+    margin: 0 auto;
+    background-color: #222426;
+    span:nth-child(1) {
+        font-family: $averageSans;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;
+        letter-spacing: 0.26em;
+        color: #597193;
+        display: block;
+        text-align: center;
+        align-items: center;
+    }
+    span:nth-child(2) {
+        @include openSans;
+        position: relative;
+        font-size: 45px;
+        line-height: 55px;
+        color: #353637;
+        display: block;
+        text-align: center;
+        align-items: center;
+    }
 }
 
 
