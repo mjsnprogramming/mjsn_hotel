@@ -161,7 +161,7 @@
             <div id = "customers">
                 <span>Our Happy Customers</span>
                 <p>Know about our clients, we are a worldwide corporate brand</p>
-                <div class = "comment">
+                <div id = "firstComment" class = "comment">
                     <img :src = "warren">
                     <span>Wade Warren</span>
                     <span>Louis Vuitton</span>
@@ -170,7 +170,7 @@
                        industry benchmarks. Take your career<br>
                        to next level</p>
                 </div>
-                <div class = "comment">
+                <div id = "secondComment" class = "comment">
                     <img :src = "florise">
                     <span>Albert Florise</span>
                     <span>Nintendo</span>
@@ -179,7 +179,7 @@
                        industry benchmarks. Take your career<br>
                        to next level</p>
                 </div>
-                <div class = "comment">
+                <div id = "thirdComment" class = "comment">
                     <img :src = "wilson">
                     <span>Wade Warren</span>
                     <span>Louis Vuitton</span>
@@ -193,7 +193,7 @@
                 <span>HOTEL BLOG</span>
                 <span>Our News</span>
 
-                <div id = "travelWithMap">
+                <div id = "firstArticle">
                     <img :src = "map">
                     <img :src = "worldMini">
                     <span>Travel</span>
@@ -204,7 +204,7 @@
                     <span>Read More</span>
                     <img :src = "arrowMini">
                 </div>
-                <div id = "travelWithMap">
+                <div id = "secondArticle">
                     <img :src = "single2">
                     <img :src = "worldMini">
                     <span>Travel</span>
@@ -215,7 +215,7 @@
                     <span>Read More</span>
                     <img :src = "arrowMini">
                 </div>
-                <div id = "travelWithMap">
+                <div id = "thirdArticle">
                     <img :src = "luxury2">
                     <img :src = "worldMini">
                     <span>Travel</span>
@@ -232,7 +232,7 @@
                 <p>Signup to receive news and<br>
                    updates from our hotel</p>
                 <input type = "email" id = "email" placeholder = "Enter Your Email Address">
-                <button id = "subscribe">subscribe</button>
+                <button id = "subscribeButton">subscribe</button>
             </div>
         </div>
 </template>
@@ -421,6 +421,82 @@ $averageSans: "Average Sans", sans-serif;
         position: absolute;
         top: 19px;
         border: transparent;
+}
+@mixin blog() {
+        @include openSans;
+        width: 350px;
+        height: 523px;
+        border: 1px solid #596B86;
+        top: 137px;
+        img:nth-child(1) {
+            height: 318px;
+            left: -1px;
+            top: -3px;
+            position: absolute;
+        }
+        img:nth-child(2) {
+            width: 18.91;
+            height: 21px;
+            top: 335px;
+            position: absolute;
+            left: 26px;
+        } 
+        span:nth-child(3) {
+            font-size: 15px;
+            letter-spacing: 0.01em;
+            color: #797979;
+            position: absolute;
+            top: 333px;
+            left: 52px;
+        }
+        img:nth-child(4) {
+            width: 19px;
+            height: 16.88px;
+            top: 335px;
+            left: 171px;
+            position: absolute;
+        }
+        span:nth-child(5) {
+            font-size: 15px;
+            letter-spacing: 0.01em;
+            top: 333px;
+            left: 196px;
+            position: absolute;
+            color: #797979;
+        }
+        span:nth-child(6) {
+            font-size: 24px;
+            line-height: 34px;
+            color: #131313;
+            top: 364px;
+            left: 26px;
+            position: absolute;
+        }
+        p:nth-child(7) {
+            font-family: $averageSans;
+            font-size: 15px;
+            color: #9B9B9B;
+            top: 405px;
+            left: 26px;
+            position: absolute;
+        }
+        span:nth-child(8) {
+            font-size: 16px;
+            color: #596B86;
+            top: 483px;
+            left: 26px;
+            position: absolute;
+            cursor: pointer;
+        }
+        img:nth-child(9) {
+            height: 9.49px;
+            width: 22.28px;
+            top: 491px;
+            left: 119px;
+            position: absolute;
+            cursor: pointer;
+        }
+
 }
 #page,
 #getStarted {
@@ -936,7 +1012,196 @@ p:nth-child(2) {
             left: 540px;
         }
     }
-    
+    #customers {
+        width: 1110px;
+        height: 524px;
+        position: relative;
+        display: block;
+        margin: 0 auto;
+        top: 1796px;
+        span:nth-child(1) {
+            @include openSans;
+            font-size: 40px;
+            line-height: 50px;
+            color: #353637;
+            top: 0;
+            left: 0;
+        }
+        p {
+            font-family: $averageSans;
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 26px;
+            letter-spacing: 0.045em;
+            color: #959595;
+            position: absolute;
+            top: 30px;
+            left: 0;
+        }
+        .comment {
+            width: 350px;
+            height: 389px;
+            border: transparent;
+            border-radius: 6px;
+            background-color: #F6FCFA;
+            
+            img {
+                width: 83px;
+                height: 83px;
+                position: absolute;
+                top: 50px;
+                left: 37px;
+            }
+            span:nth-child(2) {
+                font-family: "work sans", sans-serif;
+                font-weight: 500;
+                font-size: 30px;
+                line-height: 50px;
+                color: #101828;
+                position: absolute;
+                top: 157px;
+                left: 37px;
+            }
+            span:nth-child(3) {
+                @include openSans;
+                line-height: 50px;
+                color: #606772;
+                top: 194px;
+                left: 37px;
+            }
+            p:nth-child(4) {
+                font-family: "Merriweather", sans-serif;
+                font-weight: normal;
+                font-size: 14px;
+                line-height: 26px;
+                letter-spacing: 0.02em;
+                color: #6D7589;
+                position: absolute;
+                top: 233px;
+                left: 37px;
+            }
+
+        }
+        #firstComment {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+        }
+        #secondComment {
+            position: absolute;
+            top: 100px;
+            left: 380px;
+            background-color: rgba(113, 136, 170, 0.55)
+        }
+        #thirdComment {
+            position: absolute;
+            bottom: 0;
+            left: 799px;
+        }
+    }
+    #blog {
+        width: 1110px;
+        height: 660px;
+        position: relative;
+        display: block;
+        margin: 0 auto;
+        top: 1996px;
+        span:nth-child(1) {
+            font-family: $averageSans;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 24px;
+            letter-spacing: 0.26em;
+            color: #7587A0;
+            top: 0;
+            left: 0;
+        }
+        span:nth-child(2) {
+            @include openSans;
+            font-size: 45px;
+            line-height: 55px;
+            color: #353637;
+            top: 40px;
+            left: 0;
+        }
+        #firstArticle {
+            @include blog;
+            left: 0;
+        }
+        #secondArticle {
+            @include blog;
+            left: 380px;
+        }
+        #thirdArticle {
+            @include blog;
+            left: 760px;
+        }
+    }
+    #subscribe {
+        width: 1110px;
+        height: 383px;
+        border-radius: 10px;
+        background-color: #B1BED0;
+        position: relative;
+        display: block;
+        margin: 0 auto;
+        top: 2196px;
+        span {
+            font-family: $averageSans;
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 24px;
+            letter-spacing: 0.155em;
+            display: block;
+            text-align: center;
+            align-items: center;
+            color: #FFFFFF;
+            position: relative;
+            top: 73px;
+        }
+        p {
+            font-family: $openSans;
+            font-weight: 400;
+            font-size: 40px;
+            line-height: 50px;
+            display: block;
+            text-align: center;
+            align-items: center;
+            color: #334052;;
+            position: relative;
+            top: 35px;
+        }
+        #email {
+            width: 446px;
+            height: 45px;
+            box-shadow: 0px 2px 12px rgba(52, 52, 52, 0.15);
+            border-radius: 6px;
+            border: transparent;
+            position: absolute;
+            top: 265px;
+            left: 332px;
+            ::placeholder {
+                @include openSans;
+                line-height: 50px;
+                padding-left: 19px;
+                color: #A2A2A2;
+            }
+        }
+        #subscribeButton {
+            width: 107px;
+            height: 49px;
+            background: #889CB9;
+            box-shadow: -3px 2px 12px rgba(0, 0, 0, 0.15);
+            border-radius: 6px;
+            color: #FFFFFF;
+            border: transparent;
+            cursor: pointer;
+            position: absolute;
+            top: 265px;
+            left: 675px;
+        }
+
+    }
 
 
 </style>
