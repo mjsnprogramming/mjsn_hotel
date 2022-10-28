@@ -99,35 +99,35 @@
                 <div id = "pickUp" class = "facilities">
                     <span>Pick up & Drop</span>
                     <img :src = "pickUpCar">
-                    <p>It is a long established fact that a reader will be distracted<br>
+                    <p>It is a long established fact that a reader will be <br>distracted
                 by the readable content of a page</p>
                 </div>
                 <div id = "parkingSpace" class = "facilities">
                     <span>Parking Space</span>
                     <img :src = "parkingCar">
-                    <p>Lorem Ipsum is simply dummy text of the printing typersetting industry</p>
+                    <p>Lorem Ipsum is simply dummy text of the <br>printing typersetting industry</p>
                 </div>
                 <div id = "roomServices" class = "facilities">
                     <span>Room Services</span>
                     <img :src = "roomServices">
-                    <p>It is a long established fact that a reader will be distracted<br>
+                    <p>It is a long established fact that a reader will be<br> distracted
                 by the readable content of a page</p>
                 </div>
                 <div id = "swimmingPool" class = "facilities">
                     <span>Swimming Pool</span>
                     <img :src = "swimmingPool">
-                    <p>Lorem Ipsum is simply dummy text of the printing typersetting industry</p>
+                    <p>Lorem Ipsum is simply dummy text of the <br>printing typersetting industry</p>
                 </div>
                 <div id = "fibreInternet" class = "facilities">
                     <span>Fibre Internet</span>
                     <img :src = "internet">
-                    <p>It is a long established fact that a reader will be distracted<br>
+                    <p>It is a long established fact that a reader will be<br> distracted
                 by the readable content of a page</p>
                 </div>
                 <div id = "breakfast" class = "facilities">
                     <span>Breakfast</span>
                     <img :src = "breakfast">
-                    <p>Lorem Ipsum is simply dummy text of the printing typersetting industry</p>
+                    <p>Lorem Ipsum is simply dummy text of the <br>printing typersetting industry</p>
                 </div>
             </div>
             <div id = "numbers">
@@ -154,6 +154,7 @@
                 look even slightly believable</p>
                 <button id = "explore">Explore More</button>
                 <button id = "playVideo"></button>
+                <div id = "insideWatch2"></div>
                 <span>Watch video</span>
                 <iframe></iframe>
             </div>
@@ -393,6 +394,33 @@ $averageSans: "Average Sans", sans-serif;
         left: 80px;
         color: #585858;
     }
+}
+@mixin numbersSpan() {
+        font-family: $openSans;
+        font-weight: 700;
+        font-size: 50px;
+        line-height: 55px;
+        color: #596B86;
+        position: absolute;
+        top: 0;
+}
+@mixin numbersSpan2() {
+        font-family: $averageSans;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 24px;
+        letter-spacing: 0.02em;
+        color: #939393;
+        position: absolute;
+        bottom: 0;
+}
+@mixin numbersHR() {
+        width: 1.5px;
+        height: 54px;
+        background-color: #C3C3C3;
+        position: absolute;
+        top: 19px;
+        border: transparent;
 }
 #page,
 #getStarted {
@@ -682,7 +710,6 @@ p:nth-child(2) {
     top: 1196px;
     display: block;
     margin: 0 auto;
-    background-color: #222426;
     span:nth-child(1) {
         font-family: $averageSans;
         font-weight: 400;
@@ -705,6 +732,211 @@ p:nth-child(2) {
         align-items: center;
     }
 }
+.facilities {
+    width: 350px;
+    height: 158px;
+    border: 1px solid #596B86;
+    position: absolute;
+    border-radius: 2px;
+    span {
+        @include openSans;
+        font-size: 24px !important; 
+        line-height: 55px !important;
+        color: #131313 !important;
+        top: 34px;
+        left: 28px;
+        letter-spacing: 0 !important;
+    }
+    img {
+        width: 54px;
+        height: 52.56px;
+        position: absolute;
+        top: 20px;
+        left: 264px;
+    }
+    p {
+        font-family: $averageSans;
+        font-weight: 400;
+        font-size: 14px !important;
+        line-height: 24px;
+        letter-spacing: 0.02em !important;
+        color: #9B9B9B;
+        position: absolute;
+        top: 81px;
+        left: 28px;
+    }
+
+}
+#pickUp {
+    left: 0;
+    top: 140px;
+}
+#parkingSpace {
+    left: 380px;
+    top: 140px;
+}
+#roomServices {
+    left: 760px;
+    top: 140px;
+}
+#swimmingPool {
+    left: 0;
+    top: 328px;
+}
+#fibreInternet {
+    left: 380px;
+    top: 328px;
+}
+#breakfast {
+    left: 760px;
+    top: 328px;
+}
+
+#numbers {
+    width: 946px;
+    height: 92px;
+    position: relative;
+    top: 1396px;
+    display: block;
+    margin: 0 auto;
+
+    span:nth-child(1) {
+        @include numbersSpan;
+        left: 0;
+    }
+    span:nth-child(2) {
+        @include numbersSpan2;
+        left: 0;
+    }
+    hr:nth-child(3) {
+        @include numbersHR;
+        left: 214px;
+    }
+    span:nth-child(4) {
+        @include numbersSpan;
+        left: 300px;
+    }
+    span:nth-child(5) {
+        @include numbersSpan2;
+        left: 300px;
+    }
+    hr:nth-child(6) {
+        @include numbersHR;
+        left: 455px;
+    }
+    span:nth-child(7) {
+        @include numbersSpan;
+        left: 553px;
+    }
+    span:nth-child(8) {
+        @include numbersSpan2;
+        left: 553px;
+    }
+    hr:nth-child(9) {
+        @include numbersHR;
+        left: 759px;
+    }
+    span:nth-child(10) {
+        @include numbersSpan;
+        left: 854px;
+    }
+    span:nth-child(11) {
+        @include numbersSpan2;
+        left: 854px;
+    }
+}
+    #history {
+        width: 1109px;
+        height: 523px;
+        position: relative;
+        top: 1596px;
+        display: block;
+        margin: 0 auto;
+        background-color: #F6FCFA;
+        border-radius: 0px 6px 6px 0px;
+        span:nth-child(1) {
+            @include openSans;
+            font-size: 40px !important;
+            line-height: 55px !important;
+            color: #353637;
+            top: 85px;
+            left: 62px;
+        }
+        p:nth-child(2) {
+            font-family: $averageSans;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 26px;
+            letter-spacing: 0.02em;
+            color: #686868;
+            position: absolute;
+            top: 150px;
+            left: 62px;
+        }
+        p:nth-child(3) {
+            font-family: $averageSans;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 26px;
+            letter-spacing: 0.02em;
+            color: #686868;
+            position: absolute;
+            top: 259px;
+            left: 62px;
+        }
+        #explore {
+            width: 155px;
+            height: 40px;
+            background-color: #597193;
+            box-shadow: 0px 4px 12px rgba(21, 21, 21, 0.15);
+            border-radius: 4px;
+            @include openSans;
+            text-align: center;
+            border: transparent;
+            color: #FFFFFF;
+            top: 398px;
+            left: 62px;
+            cursor: pointer;
+        }
+        #playVideo {
+            width: 41px;
+            height: 40px;
+            border-radius: 360px;
+            border: transparent;
+            position: absolute;
+            top: 398px;
+            left: 270px;
+            background-color: #597193;
+            cursor: pointer;
+        }
+        #insideWatch2 {
+            width: 20px;
+            height: 20px;
+            position: absolute;
+            top: 408px;
+            left: 283px;
+            clip-path: polygon(0 0, 0% 100%, 99% 50%);
+            border: transparent;
+            cursor: pointer;
+            z-index: 1;
+            background-color: #EAEFF6;
+        }
+        span:nth-child(7) {
+            @include openSans;
+            font-weight: 400;
+            color: #353637;
+            top: 405px;
+            left: 321px;
+        }
+        iframe:nth-child(8) {
+            width: 569px;
+            height: 523px;
+            position: absolute;
+            top: 0;
+            left: 540px;
+        }
+    }
+    
 
 
 </style>
