@@ -12,13 +12,43 @@
                 <div id = "insideWatch"></div>
                 <span id = "watchVideo">Watch video</span>
             </div>
-            <div class = "circle"></div>
-            <div class = "circle"></div>
-            <div class = "circle"></div>
-            <div class = "circle"></div>
+            <div id = "marketStatic">
+                <div id = "marketStaticHeader">
+                    <div id = "marketLittleCircle"></div>
+                    <span>Market Static</span>
+                </div>
+                <span id = "courseOverview">Course<br> overview</span>
+                <canvas id = "marketChart"></canvas>
+                <ul>
+                    <li>Jan</li>
+                    <li>Feb</li>
+                    <li>Mar</li>
+                    <li>Apr</li>
+                    <li>May</li>
+                    <li>Jun</li>
+                    <li>Jul</li>
+                    <li>Aug</li>
+                    <li>Sep</li>
+                    <li>Oct</li>
+                    <li>Nov</li>
+                    <li>Dec</li>
+                </ul>
+
+            </div>
+            <div id = "circle1" class = "circle"></div>
+            <div id = "circle2" class = "circle"></div>
+            <div id = "circle3" class = "circle"></div>
+            <div id = "circle4" class = "circle"></div>
             <div id = "circleBig">
             <div class = "circle_big"></div>
             <img id = "hotelImg" :src = "hotel">
+            </div>
+            <div id = "payment">
+                <div id = "wallet">
+                    <img :src = "wallet">
+                </div>
+                    <span>Payment</span>
+                    <span>online</span>
             </div>
             </div>
             <div id = "availability">
@@ -29,17 +59,21 @@
                 <img :src = "hotel2">
                 </div>
                 <div id = "chkAvailability">
-                    <label for = "checkIn">
+                    <img :src = "arrowToTop" id = "arrowToTop1">
+                    <img :src = "arrowToTop" id = "arrowToTop2">
+                    <img :src = "arrowToTop" id = "arrowToTop3">
+                    <img :src = "arrowToTop" id = "arrowToTop4">
+                    <label for = "checkIn" id = "checkInLabel" >
                         CHECK-IN
                         <input type = "date" id = "checkIn" name = "checkIn"
                         value = "" min = "2022-01-01" max = "2023-12-31">
                     </label>
-                    <label for = "checkOut">
+                    <label for = "checkOut" id = "checkOutLabel">
                         CHECK-OUT
                         <input type = "date" id = checkOut name = "checkOut"
                         value = "" min = "2022-01-01" max = "2023-12-31">
                     </label>
-                    <label for = "rooms">
+                    <label for = "rooms" id = "roomsLabel">
                         GUESTS:
                         <select id = "rooms" name = "rooms">
                             <option value = "1 room">1 room</option>
@@ -157,6 +191,11 @@
                 <div id = "insideWatch2"></div>
                 <span>Watch video</span>
                 <iframe></iframe>
+                    <img :src = "arrowToTop" id = "arrowToTop5">
+                    <img :src = "arrowToTop" id = "arrowToTop6">
+                    <img :src = "arrowToTop" id = "arrowToTop7">
+                    <img :src = "arrowToTop" id = "arrowToTop8">
+                
             </div>
             <div id = "customers">
                 <span>Our Happy Customers</span>
@@ -166,7 +205,7 @@
                     <span>Wade Warren</span>
                     <span>Louis Vuitton</span>
                     <p>Necessary to deliver white glove<br>
-                       fully managed campgaigns that surpass<br>
+                       fully managed campaigns that surpass<br>
                        industry benchmarks. Take your career<br>
                        to next level</p>
                 </div>
@@ -178,6 +217,14 @@
                        fully managed campgaigns that surpass<br>
                        industry benchmarks. Take your career<br>
                        to next level</p>
+                       <img :src = "arrowToTopDarkBlue" id = "arrowToTopDarkBlueSmall1">
+                        <img :src = "arrowToTopDarkBlue" id = "arrowToTopDarkBlueSmall2">
+                        <img :src = "arrowToTopDarkBlue" id = "arrowToTopDarkBlueSmall3">
+                        <img :src = "arrowToTopDarkBlue" id = "arrowToTopDarkBlueSmall4">
+                        <img :src = "arrowToTopDarkBlue" id = "arrowToTopDarkBlueBig1">
+                        <img :src = "arrowToTopDarkBlue" id = "arrowToTopDarkBlueBig2">
+                        <img :src = "arrowToTopDarkBlue" id = "arrowToTopDarkBlueBig3">
+                        <img :src = "arrowToTopDarkBlue" id = "arrowToTopDarkBlueBig4">
                 </div>
                 <div id = "thirdComment" class = "comment">
                     <img :src = "wilson">
@@ -233,12 +280,32 @@
                    updates from our hotel</p>
                 <input type = "email" id = "email" placeholder = "Enter Your Email Address">
                 <button id = "subscribeButton">subscribe</button>
+                <img :src = "arrowToTopLightBlue" id = "arrowToTopLightBlueSmall1">
+                <img :src = "arrowToTopLightBlue" id = "arrowToTopLightBlueSmall2">
+                <img :src = "arrowToTopLightBlue" id = "arrowToTopLightBlueSmall3">
+                <img :src = "arrowToTopLightBlue" id = "arrowToTopLightBlueSmall4">
+                <img :src = "arrowToTopLightBlue" id = "arrowToTopLightBlueBig1">
+                <img :src = "arrowToTopLightBlue" id = "arrowToTopLightBlueBig2">
+                <img :src = "arrowToTopLightBlue" id = "arrowToTopLightBlueBig3">
+                <img :src = "arrowToTopLightBlue" id = "arrowToTopLightBlueBig4">
             </div>
         </div>
+        <FooterComponent id = "footerComponent"></FooterComponent>
 </template>
 
 <script>
 import HeaderComponent from './HeaderComponent.vue';
+import FooterComponent from './FooterComponent.vue';
+
+const ctx = document.querySelector('#marketChart').getContext('2d');
+const marketChart = new CharacterData(ctx, {
+    type: 'line',
+    data: {
+        labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+        data: ['+5%', '+10%', '-5%', '+10%', '+10%', '+5%', '-5%', '+15%', '+15%', '-10%', '-5%', '+10%']
+    }
+     
+})
 export default {
     
     data() {   
@@ -265,11 +332,16 @@ export default {
         arrowMini: require('../assets/images/arrowMini.png'),
         commentMini: require('../assets/images/commentMini.png'),
         single2: require('../assets/images/single2.png'),
-        luxury2: require('../assets/images/luxury2.png')    
+        luxury2: require('../assets/images/luxury2.png'),
+        wallet: require('../assets/images/wallet.png'),
+        arrowToTop: require('../assets/images/arrowToTop.png'),
+        arrowToTopDarkBlue: require('../assets/images/arrowToTopDarkBlue.png'),
+        arrowToTopLightBlue: require('../assets/images/arrowToTopLightBlue.png')    
         }
     },
     components: {
-        HeaderComponent
+        HeaderComponent,
+        FooterComponent
     },
     mounted()  {
         document.querySelector('#checkIn').value = new Date();
@@ -293,6 +365,11 @@ $averageSans: "Average Sans", sans-serif;
     position: absolute;
     background-color: #C9D6E9;
     border-radius: 360px;
+}
+@mixin arrowToTop() {
+    width: 36.96px;
+    height: 36.96px;
+    position: absolute;
 }
 @mixin checkInLabel() {
     @include openSans;
@@ -496,7 +573,30 @@ $averageSans: "Average Sans", sans-serif;
             position: absolute;
             cursor: pointer;
         }
-
+}
+@mixin arrowToTopDarkBlueSmall() {
+    width: 27px;
+    height: 27px;
+    position: absolute;
+    z-index: 2;
+}
+@mixin arrowToTopDarkBlueBig() {
+    width: 72px;
+    height: 72px;
+    position: absolute;
+    z-index: 2;
+}
+@mixin arrowToTopLightBlueSmall() {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    z-index: 2;
+}
+@mixin arrowToTopDarkLightBig() {
+    width: 49.43px;
+    height: 49.43px;
+    position: absolute;
+    z-index: 2;
 }
 #page,
 #getStarted {
@@ -515,8 +615,6 @@ a {
     background-color: #EAEFF6;
     left: 0;
     top: 76px;
-    overflow: hidden;
-    
 p:nth-child(1) {
     left: 10%;
     top: 194px;
@@ -536,36 +634,33 @@ p:nth-child(2) {
     letter-spacing: 2%;
     color: #939393;
     }  
-    .circle:nth-child(1) {
+#circle1 {
     @include circles;
     width: 10px;
     height: 10px;
-    left: 534.72px;
+    left: 37%;
     top: 589px;
 }
-.circle:nth-child(2) {
+#circle2 {
     @include circles;
     width: 21px;
     height: 21px;
     top: 194px;
-    left: 717.58px;
-    
+    left: 49%;
 }
-.circle:nth-child(3) {
+#circle3 {
     @include circles;
     width: 41px;
     height: 41px;
     top: 99px;
-    left: 1205.52px;
-    
+    left: 83%;
 }
-.circle:nth-child(4) {
+#circle4 {
     @include circles;
     width: 27px;
     height: 27px;
     top: 598px;
-    left: 1236.84px;
-    
+    left: 85%;
 }
     }
 #getStarted {
@@ -573,7 +668,6 @@ p:nth-child(2) {
     height: 40px;
     left: 10%;
     top: 513px;
-    
     #startedButton {
         @include openSans;
         width: 136.38px;
@@ -618,6 +712,68 @@ p:nth-child(2) {
         top: 7px;
     }
 }
+#marketStatic {
+    width: 208.11px;
+    height: 163px;
+    border-radius: 8px;
+    border: transparent;
+    position: absolute;
+    top: 435px;
+    left: 45%;
+    background-color: #FFFFFF;
+    z-index: 3;
+    #marketStaticHeader {
+        width: 106.08px;
+        height: 18px;
+        background-color: #C9D6E9;
+        border-radius: 15px;
+        position: absolute;
+        top: 14px;
+        left: 15.15px;
+        #marketLittleCircle {
+            width: 5.05px;
+            height: 5px;
+            background-color: #4C6487;
+            position: absolute;
+            top: 7px;
+            left: 8.08px;
+            border-radius: 360px;
+            border: transparent;
+        }
+        span {
+            @include openSans;
+            font-size: 12px;
+            line-height: 50px;
+            color: #4C6487;
+            top: -15px;
+            left: 20.8px;
+        }
+    }
+    #marketChart {
+        width: 170px;
+        height: 36px;
+    }
+    #courseOverview {
+            @include openSans;
+            font-size: 12px;
+            line-height: 14px;
+            color: #101828;
+            position: absolute;
+            top: 42px;
+            left: 15.15px;
+        }
+        ul li {
+            text-decoration: none;
+            display: inline-block;
+            @include openSans;
+            font-size: 10px;
+            position: relative;
+            top: 122px;
+            left: -25.15px;
+            margin-left: 5px;
+            color: #6D7589;
+        }
+}
 #circleBig {
     width: 544.52px;
     height: 600px;
@@ -643,6 +799,54 @@ p:nth-child(2) {
         width: 323.28px;
         height: 569px;
  }   
+}
+#payment {
+    width: 114.16px;
+    height: 124px;
+    box-shadow: 0px 8px 28px rgba(84, 84, 84, 0.1);
+    border-radius: 5px;
+    border: transparent;
+    position: absolute;
+    top: 186px;
+    left: 95%;
+    background-color: #FFFFFF;
+    span:nth-child(2) {
+        font-family: 'Work Sans', sans-serif;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 14px;
+        color: #101828;
+        position: absolute;
+        top: 74px;
+        left: 22.23px;
+    }
+    span:nth-child(3) {
+        font-family: 'Work Sans', sans-serif;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 50px;
+        color: #565656;
+        position: absolute;
+        top: 76px;
+        left: 36.29px;
+    }
+    #wallet {
+        width: 38.39px;
+        height: 38px;
+        background-color: #C9D6E9;
+        border-radius: 360px;
+        border: transparent;
+        position: absolute;
+        top: 19px;
+        left: 38.39px;
+        img {
+            width: 17.26px;
+            height: 15.37px;
+            position: absolute;
+            top: 11px;
+            left: 11.11px;
+        }
+    }
 }
 
 #availability {
@@ -700,15 +904,39 @@ p:nth-child(2) {
     left: 637px;
     background-color: #F6FCFA;
     border-radius: 0px 8px 8px 0px;
-    label:nth-child(1) {
+    #arrowToTop1 {
+        @include arrowToTop;
+        top: 0;
+        left: 401.25px;
+    }
+    #arrowToTop2 {
+        @include arrowToTop;
+        top: 0;
+        left: 438.21px;
+    }
+    #arrowToTop3 {
+        @include arrowToTop;
+        top: 36.96px;
+        left: 401px;
+    }
+    #arrowToTop4 {
+        @include arrowToTop;
+        top: 36.96px;
+        left: 438.21px;
+    } 
+    #checkInLabel {
         @include checkInLabel;
         top: 77px;
     }
     #checkIn {
         @include checkInInputs;
         top: 53px;
+        ::-webkit-datetime-text,
+        ::-webkit-datetime-month-field {
+            color: #636461;
+        }
     }
-    label:nth-child(2) {
+    #checkOutLabel {
         @include checkInLabel;
         top: 182px;
     }
@@ -716,7 +944,7 @@ p:nth-child(2) {
         @include checkInInputs;
         top: 53px;
     }
-    label:nth-child(3) {
+    #roomsLabel {
         @include checkInLabel;
         top: 287px;
     }
@@ -1011,6 +1239,26 @@ p:nth-child(2) {
             top: 0;
             left: 540px;
         }
+    #arrowToTop5 {
+        @include arrowToTop;
+        top: 446px;
+        left: 463.26px;
+    }
+    #arrowToTop6 {
+        @include arrowToTop;
+        top: 446px;
+        left: 501.63px;
+    }
+    #arrowToTop7 {
+        @include arrowToTop;
+        top: 484.37px;
+        left: 463.26px;
+    }
+    #arrowToTop8 {
+        @include arrowToTop;
+        top: 484.37px;
+        left: 501.63px;
+    } 
     }
     #customers {
         width: 1110px;
@@ -1091,7 +1339,56 @@ p:nth-child(2) {
             position: absolute;
             top: 100px;
             left: 380px;
-            background-color: rgba(113, 136, 170, 0.55)
+            background-color: rgba(113, 136, 170, 0.55);
+            span {
+            color: #FFFFFF !important;
+            }
+            p {
+                color: #FFFFFF !important;
+                z-index: 3;
+            }
+            z-index: 1;
+            #arrowToTopDarkBlueSmall1 {
+                @include arrowToTopDarkBlueSmall;
+                top: 0;
+                left: 295px;
+            }
+            #arrowToTopDarkBlueSmall2 {
+                @include arrowToTopDarkBlueSmall;
+                top: 0;
+                left: 323px;
+            }
+            #arrowToTopDarkBlueSmall3 {
+                @include arrowToTopDarkBlueSmall;
+                top: 28px;
+                left: 295px;
+            }
+            #arrowToTopDarkBlueSmall4 {
+                @include arrowToTopDarkBlueSmall;
+                top: 28px;
+                left: 323px;
+            }
+            #arrowToTopDarkBlueBig1 {
+                @include arrowToTopDarkBlueBig;
+                top: 242px;
+                left: 0;
+            }
+            #arrowToTopDarkBlueBig2 {
+                @include arrowToTopDarkBlueBig;
+                top: 242px;
+                left: 75px;
+            } 
+            #arrowToTopDarkBlueBig3 {
+                @include arrowToTopDarkBlueBig;
+                top: 317px;
+                left: 0;
+            } 
+            #arrowToTopDarkBlueBig4 {
+                @include arrowToTopDarkBlueBig;
+                top: 317px;
+                left: 75px;
+            }  
+
         }
         #thirdComment {
             position: absolute;
@@ -1131,6 +1428,7 @@ p:nth-child(2) {
         #secondArticle {
             @include blog;
             left: 380px;
+            
         }
         #thirdArticle {
             @include blog;
@@ -1200,8 +1498,53 @@ p:nth-child(2) {
             top: 265px;
             left: 675px;
         }
+        #arrowToTopLightBlueSmall1 {
+            @include arrowToTopLightBlueSmall;
+            top: 0;
+            left: 1031px;
+        }
+        #arrowToTopLightBlueSmall2 {
+            @include arrowToTopLightBlueSmall;
+            top: 0;
+            left: 1071px;
+        }
+        #arrowToTopLightBlueSmall3 {
+            @include arrowToTopLightBlueSmall;
+            top: 40px;
+            left: 1031px;
+        }
+        #arrowToTopLightBlueSmall4 {
+            @include arrowToTopLightBlueSmall;
+            top: 40px;
+            left: 1071px;
+        }
+        #arrowToTopLightBlueBig1 {
+            @include arrowToTopDarkLightBig;
+            top: 285px;
+            left: 0;
+        }
+        #arrowToTopLightBlueBig2 {
+            @include arrowToTopDarkLightBig;
+            top: 285px;
+            left: 49.43px;
+        }
+        #arrowToTopLightBlueBig3 {
+            @include arrowToTopDarkLightBig;
+            top: 334.43px;
+            left: 0;
+        }
+        #arrowToTopLightBlueBig4 {
+            @include arrowToTopDarkLightBig;
+            top: 334.43px;
+            left: 49.43px;
+        }
 
     }
+#footerComponent {
+    position: relative;
+    left: 0;
+    top: 2796px;
+}
 
 
 </style>
