@@ -123,5 +123,21 @@ a {
     border-radius: 4px;
     color: #ffffff;
 }
+@media screen and  (max-width: 1460px) {
+    
+    #main {
+        width: 100%;
+    }
+    #reservation {
+        left: 85%;
+    }
+}
+@media screen and (max-width: 913px) {
+    #main ul li,
+    #reservation {
+        display: none;
+    }
+}
+
 
 </style>

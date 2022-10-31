@@ -19,20 +19,7 @@
                 </div>
                 <span id = "courseOverview">Course<br> overview</span>
                 <canvas id = "marketChart"></canvas>
-                <ul>
-                    <li>Jan</li>
-                    <li>Feb</li>
-                    <li>Mar</li>
-                    <li>Apr</li>
-                    <li>May</li>
-                    <li>Jun</li>
-                    <li>Jul</li>
-                    <li>Aug</li>
-                    <li>Sep</li>
-                    <li>Oct</li>
-                    <li>Nov</li>
-                    <li>Dec</li>
-                </ul>
+                
 
             </div>
             <div id = "circle1" class = "circle"></div>
@@ -40,7 +27,7 @@
             <div id = "circle3" class = "circle"></div>
             <div id = "circle4" class = "circle"></div>
             <div id = "circleBig">
-            <div class = "circle_big"></div>
+            <div class = "circleBig"></div>
             <img id = "hotelImg" :src = "hotel">
             </div>
             <div id = "payment">
@@ -195,7 +182,6 @@
                     <img :src = "arrowToTop" id = "arrowToTop6">
                     <img :src = "arrowToTop" id = "arrowToTop7">
                     <img :src = "arrowToTop" id = "arrowToTop8">
-                
             </div>
             <div id = "customers">
                 <span>Our Happy Customers</span>
@@ -290,22 +276,24 @@
                 <img :src = "arrowToTopLightBlue" id = "arrowToTopLightBlueBig4">
             </div>
         </div>
-        <FooterComponent id = "footerComponent"></FooterComponent>
+        <!--<FooterComponent id = "footerComponent"></FooterComponent>-->
 </template>
-
 <script>
 import HeaderComponent from './HeaderComponent.vue';
-import FooterComponent from './FooterComponent.vue';
+//import FooterComponent from './FooterComponent.vue';
 
-const ctx = document.querySelector('#marketChart').getContext('2d');
+/*const ctx = document.querySelector('#marketChart').getContext('2d');
 const marketChart = new CharacterData(ctx, {
     type: 'line',
     data: {
         labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
-        data: ['+5%', '+10%', '-5%', '+10%', '+10%', '+5%', '-5%', '+15%', '+15%', '-10%', '-5%', '+10%']
+        data: [5, 10, -5, 10, 10, 5, 5, 15, 15, 10, 5, 10]
     }
+    
      
 })
+marketChart();
+*/
 export default {
     
     data() {   
@@ -340,8 +328,8 @@ export default {
         }
     },
     components: {
-        HeaderComponent,
-        FooterComponent
+        HeaderComponent
+        //FooterComponent
     },
     mounted()  {
         document.querySelector('#checkIn').value = new Date();
@@ -360,7 +348,6 @@ $averageSans: "Average Sans", sans-serif;
     font-size: 13px;
     line-height: 26px;
 }
-
 @mixin circles() {
     position: absolute;
     background-color: #C9D6E9;
@@ -407,7 +394,6 @@ $averageSans: "Average Sans", sans-serif;
         font-weight: 300;
         top: 331px;
         color: #727272;
-
 }
 @mixin roomsDescription() {
     .roomsImg {
@@ -781,7 +767,7 @@ p:nth-child(2) {
     left: 52%;
     top: 99px;
 
-    .circle_big {
+    .circleBig {
         width: 540px;
         height: 540px;
         background-color: #F6FCFA;
@@ -848,7 +834,6 @@ p:nth-child(2) {
         }
     }
 }
-
 #availability {
     position: relative;
     top: 896px;
@@ -876,7 +861,6 @@ p:nth-child(2) {
         letter-spacing: 0.02em;
         color: #959595;
     }
-    
 }
 #hotelImgAvailability {
     background-color: #B1BED0;
@@ -975,7 +959,9 @@ p:nth-child(2) {
         line-height: 55px;
         color: #353637;
         top: 0;
-        left: 293px;
+        margin: 0 auto;
+            display: block;
+            position: relative;
         display: block;
         text-align: center;
         align-items: center;
@@ -988,7 +974,7 @@ p:nth-child(2) {
         letter-spacing: 0.02em;
         color: #959595;
         position: relative;
-        top: 73px;
+        top: 23px;
     }
 }
 #deluxe {
@@ -1069,7 +1055,6 @@ p:nth-child(2) {
         top: 81px;
         left: 28px;
     }
-
 }
 #pickUp {
     left: 0;
@@ -1095,7 +1080,6 @@ p:nth-child(2) {
     left: 760px;
     top: 328px;
 }
-
 #numbers {
     width: 946px;
     height: 92px;
@@ -1103,7 +1087,6 @@ p:nth-child(2) {
     top: 1396px;
     display: block;
     margin: 0 auto;
-
     span:nth-child(1) {
         @include numbersSpan;
         left: 0;
@@ -1292,7 +1275,6 @@ p:nth-child(2) {
             border: transparent;
             border-radius: 6px;
             background-color: #F6FCFA;
-            
             img {
                 width: 83px;
                 height: 83px;
@@ -1328,7 +1310,6 @@ p:nth-child(2) {
                 top: 233px;
                 left: 37px;
             }
-
         }
         #firstComment {
             position: absolute;
@@ -1388,7 +1369,6 @@ p:nth-child(2) {
                 top: 317px;
                 left: 75px;
             }  
-
         }
         #thirdComment {
             position: absolute;
@@ -1427,8 +1407,7 @@ p:nth-child(2) {
         }
         #secondArticle {
             @include blog;
-            left: 380px;
-            
+            left: 380px;  
         }
         #thirdArticle {
             @include blog;
@@ -1538,13 +1517,11 @@ p:nth-child(2) {
             top: 334.43px;
             left: 49.43px;
         }
-
     }
 #footerComponent {
     position: relative;
     left: 0;
     top: 2796px;
 }
-
-
+@import './HomeMobile.scss';
 </style>

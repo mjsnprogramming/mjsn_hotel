@@ -1,0 +1,204 @@
+@media screen and (max-width: 1460px) {
+    #page {
+        width: 100%;
+    }
+    #marketStatic {
+        top: 465px;
+        left: 42%;
+    }
+    #payment {
+        left: 90%;
+    }
+    #circle3 {
+        left: 88% !important;
+    }
+    #circle4 {
+        left: 93% !important;
+    }
+}
+@media screen and (max-width: 1150px) {
+    #page {
+        height: 1410px;
+    }
+    #marketStatic {
+        top: 1116px;
+        left: 50px;
+    }
+    #circleBig {
+        top: 804px;
+        left: 27%;
+    }
+    #circle1 {
+        top: 1294px !important;
+        left: 32% !important; 
+    }
+    #circle2 {
+        top: +765px !important;
+        left: 39% !important;
+    }
+    #circle3 {
+        top: 806px !important;
+        left: 84% !important; 
+    }
+    #circle4 {
+        top: 1303px !important;
+        left: 86%;
+    }
+    #payment {
+        top: 891px;
+        left: 86%;
+    }
+    #availability {
+        top: 1601px;
+        width: 475.17px;
+        height: 1217px;
+        #hotelImgAvailability {
+            width: 475.17px;
+            top: 171px;
+            img {
+                width: 475.17px;
+            }
+        }
+        #chkAvailability {
+            left: 0;
+            top: 694px;
+        }
+    }
+    #popularRooms {
+        top: 1812px;
+        width: 730px;
+        height: 1189px;
+        span:nth-child(1) {
+            margin: 0 auto;
+            display: block;
+            position: relative;
+        }
+        p {
+            top: 43px;
+        }
+        #deluxe,
+        #luxury {
+            top: 275px;
+        }
+        #single {
+            position: absolute;
+            left: 181.5px;
+        }
+    }
+    #services {
+        width: 730px;
+        height: 674px;
+        top: 2012px;
+        #roomServices {
+            left: 0;
+            top: 516px;
+        }
+        #breakfast {
+            left: 380px;
+            top: 516px;
+        }
+    }
+    #numbers {
+        width: 473px;
+        top: 2212px;
+        hr:nth-child(6) {
+            display: none;
+        }
+        span:nth-child(7) {
+            left: 0;
+            top: 170px;
+        }
+        span:nth-child(8) {
+            left: 0;
+            top: 240px;
+        }
+        hr:nth-child(9) {
+            left: 214px;
+            top: 200px;
+        }
+        span:nth-child(10) {
+            left: 300px;
+            top: 170px;
+        }
+        span:nth-child(11) {
+            left: 300px;
+            top: 240px;
+        }
+    }
+    #history {
+        top: 2535px;
+        width: 554.5px;
+        height: 1046px;
+        iframe:nth-child(8) {
+            top: 523px;
+            left: 0;
+        }
+    }
+    #customers {
+        top: 2678px;
+        width: 730px;
+        height: 1024px;
+        #firstComment {
+            top: 150px;
+        }
+        #thirdComment {
+            left: 320px;
+            top: 580px;
+        }
+    }
+    #blog {
+        top: 2800px;
+        width: 730px;
+        height: 1225px;
+        #thirdArticle {
+            left: 181.5px;
+            top: 700px;
+        }
+    }
+    #subscribe {
+        top: 3000px;
+        width: 800px;
+        #email {
+            left: 182px;
+            width: 386px;
+        }
+        #arrowToTopLightBlueSmall1,
+        #arrowToTopLightBlueSmall3 {
+            left: 720px;
+        }
+        #arrowToTopLightBlueSmall2,
+        #arrowToTopLightBlueSmall4 {
+            left: 760px;
+        }
+        #subscribeButton {
+            left: 568px;
+        }
+    }
+}
+@media screen and (max-width: 913px) {
+    #payment {
+        left: 80%;
+    }
+}
+@media screen and (max-width: 824px) {
+    #page {
+        height: 1210px;
+    }
+    #circleBig {
+        width: 344px;
+        height: 400px;
+        display: flex;
+        justify-content: center;
+        .circleBig {
+            width: 344px;
+            height: 344px;
+        }
+        #hotelImg {
+            width: 153px;
+            height: 369px;
+        }
+    }
+}
+@media screen and (max-width: 530px) {
+
+}
