@@ -960,8 +960,8 @@ p:nth-child(2) {
         color: #353637;
         top: 0;
         margin: 0 auto;
-            display: block;
-            position: relative;
+        display: block;
+        position: relative;
         display: block;
         text-align: center;
         align-items: center;
@@ -1010,6 +1010,7 @@ p:nth-child(2) {
         display: block;
         text-align: center;
         align-items: center;
+        position: relative;
     }
     span:nth-child(2) {
         @include openSans;
@@ -1034,7 +1035,7 @@ p:nth-child(2) {
         line-height: 55px !important;
         color: #131313 !important;
         top: 34px;
-        left: 28px;
+        left: -68px;
         letter-spacing: 0 !important;
     }
     img {
