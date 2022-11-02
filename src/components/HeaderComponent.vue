@@ -123,7 +123,7 @@ a {
     border-radius: 4px;
     color: #ffffff;
 }
-@media screen and  (max-width: 1460px) {
+@media screen and (max-width: 1460px) {
     
     #main {
         width: 100%;

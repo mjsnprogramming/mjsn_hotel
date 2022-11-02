@@ -1,4 +1,5 @@
 <template>
+
     <div class = "atTheTop">
         <HeaderComponent></HeaderComponent>
         <div id = "page">
@@ -16,11 +17,19 @@
                 <div id = "marketStaticHeader">
                     <div id = "marketLittleCircle"></div>
                     <span>Market Static</span>
+                    <div id = "barChart">
+                    <Bar type = "line"
+                            :chart-options = "chartOptions"
+                            :chart-data = "chartData"
+                            :chart-id = "chartId"
+                            :dataset-id-key = "datasetIdKey"
+                            :plugins = "pluins"
+                            :css-classes = "cssClasses"
+                            :styles = "styles"
+                    />
+                    </div>
                 </div>
                 <span id = "courseOverview">Course<br> overview</span>
-                <canvas id = "marketChart"></canvas>
-                
-
             </div>
             <div id = "circle1" class = "circle"></div>
             <div id = "circle2" class = "circle"></div>
@@ -276,28 +285,61 @@
                 <img :src = "arrowToTopLightBlue" id = "arrowToTopLightBlueBig4">
             </div>
         </div>
-        <!--<FooterComponent id = "footerComponent"></FooterComponent>-->
+        <FooterComponent id = "footerComponent"></FooterComponent>
+        
+        
 </template>
 <script>
 import HeaderComponent from './HeaderComponent.vue';
-//import FooterComponent from './FooterComponent.vue';
+import FooterComponent from './FooterComponent.vue';
+import { Bar } from 'vue-chartjs';
+import { Chart as ChartJS, Title, Tooltip, Legend, BarElement, CategoryScale, LinearScale } from 'chart.js';
 
-/*const ctx = document.querySelector('#marketChart').getContext('2d');
-const marketChart = new CharacterData(ctx, {
-    type: 'line',
-    data: {
-        labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
-        data: [5, 10, -5, 10, 10, 5, 5, 15, 15, 10, 5, 10]
-    }
-    
-     
-})
-marketChart();
-*/
+ChartJS.register(Title, Tooltip, Legend, BarElement, CategoryScale, LinearScale);
+
 export default {
-    
+    name: 'atTheTop',
     data() {   
         return {
+        chartData: {
+            datalabel: null,
+            labels: [
+                'Jan',
+                'Feb',
+                'Mar',
+                'Apr',
+                'May',
+                'Jun',
+                'Jul',
+                'Aug',
+                'Sep',
+                'Oct',
+                'Nov',
+                'Dec'
+        ],
+        datasets: [ {
+            data: [5, 10, -5, 10, 10, 5, 5, 15, 15, 10, 5, 10],
+            backgroundColor: '#596B86'
+        }],
+        chartOptions: {
+            chart: {
+                type: 'line'
+            },
+            dataLabels: {
+                enabled: false
+            },
+            stroke: {
+              curve: 'straight'
+            },
+            title: {
+              text: 'Course Overview',
+              align: 'left'
+            },
+            xaxis: {
+              categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep'],
+            }
+        },
+        },
         hotel: require('../assets/images/hotel.png'),
         hotel2: require('../assets/images/hotel2.png'),
         deluxe: require('../assets/images/deluxe.png'),
@@ -324,21 +366,59 @@ export default {
         wallet: require('../assets/images/wallet.png'),
         arrowToTop: require('../assets/images/arrowToTop.png'),
         arrowToTopDarkBlue: require('../assets/images/arrowToTopDarkBlue.png'),
-        arrowToTopLightBlue: require('../assets/images/arrowToTopLightBlue.png')    
+        arrowToTopLightBlue: require('../assets/images/arrowToTopLightBlue.png')   
         }
     },
     components: {
-        HeaderComponent
-        //FooterComponent
+        HeaderComponent,
+        FooterComponent,
+        Bar
     },
     mounted()  {
         document.querySelector('#checkIn').value = new Date();
         document.querySelector('#checkOut').value = new Date() + 1;
-    }}
-
+    },
+    props: {
+        chartId: {
+        type: String,
+        default: 'bar-chart'
+    },
+    datasetIdKey: {
+        type: String,
+        default: 'label',
+    },
+    width: {
+        type: Number,
+        default: 208
+    },
+    height: {
+        type: Number,
+        default: 163
+    },
+    cssClasses: {
+        default: '',
+        type: String
+    },
+    styles: {
+        type: Object,
+        default: () => {}
+    },
+    plugins: {
+        type: Object,
+        default: () => {}
+    }
+}
+}
 </script>
-
 <style lang = scss>
+#barChart  {
+    width: 200px;
+    height: 120px;
+    background-color: #101828;
+    position: absolute;
+    left: -10px;
+    top: 30px;
+}
 $openSans: "Open Sans", sans-serif;
 $averageSans: "Average Sans", sans-serif;
 @mixin openSans() {
@@ -1458,10 +1538,11 @@ p:nth-child(2) {
             position: absolute;
             top: 265px;
             left: 332px;
+            outline: none;
             ::placeholder {
                 @include openSans;
                 line-height: 50px;
-                padding-left: 19px;
+                padding-left: 19px !important;
                 color: #A2A2A2;
             }
         }
