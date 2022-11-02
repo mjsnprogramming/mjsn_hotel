@@ -18,7 +18,24 @@
             </ul>
             
             <button id = "reservation">Reservation</button>
-            
+
+            <div id = "nav">
+                <div id = "link1" class = "navLinks"></div>
+                <div id = "link2" class = "navLinks"></div>
+                <div id = "link3" class = "navLinks"></div>
+                <span>Menu</span>
+            </div>
+            <div id = "navDrop">
+                <ul>
+                    <li><a href = "Home">Home</a></li>
+                    <li><a href = "Branch">Branch</a></li>
+                    <li><a href = "Search">Search</a></li>
+                    <li><a href = "About Us">About Us</a></li>
+                    <li><a href = "Pages">Pages</a></li>
+                    <li><a href = "Blog">Blog</a></li>
+                </ul>
+                <button id = "reservationMobile">Reservation</button>
+            </div>
         </div>
         
 
@@ -123,6 +140,44 @@ a {
     border-radius: 4px;
     color: #ffffff;
 }
+
+#nav {
+    width: 40px;
+    height: 50px;
+    background-color: black;
+    position: absolute;
+    top: 20px;
+    left: 90%;
+    display: none;
+    span {
+        position: absolute;
+        left: 0;
+            bottom: 0;
+        }
+}
+.navLinks {
+        width: 40px;
+        height: 8px;
+        background-color: #FFFFFF;
+        position: absolute;
+    }
+#link1 {
+            position: absolute;
+            top: 0;
+        }
+#link2 {
+    position: absolute;
+    top: 15px;
+}
+#link3 {
+    position: absolute;
+    top: 26px;
+}
+    #navDrop {
+        display: none;
+    }
+
+
 @media screen and (max-width: 1460px) {
     
     #main {
@@ -136,6 +191,9 @@ a {
     #main ul li,
     #reservation {
         display: none;
+    }
+    #nav {
+        display: block;
     }
 }
 
