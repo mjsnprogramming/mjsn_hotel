@@ -23,9 +23,20 @@
                 <div id = "link1" class = "navLinks"></div>
                 <div id = "link2" class = "navLinks"></div>
                 <div id = "link3" class = "navLinks"></div>
-                <span>Menu</span>
+                <span>MENU</span>
             </div>
             <div id = "navDrop">
+                <div id = "topDrop">
+                    <span>MJSN</span>
+                    <span>HOTEL</span>
+                    <button id = "reservationMobile">Reservation</button>
+                    <div id = "navDropped">
+                        <div id = "link4" class = "navLinksDropped"></div>
+                        <div id = "link5" class = "navLinksDropped"></div>
+                        <div id = "link6" class = "navLinksDropped"></div>
+                        <span>MENU</span>
+            </div>
+                </div>
                 <ul>
                     <li><a href = "Home">Home</a></li>
                     <li><a href = "Branch">Branch</a></li>
@@ -34,7 +45,15 @@
                     <li><a href = "Pages">Pages</a></li>
                     <li><a href = "Blog">Blog</a></li>
                 </ul>
-                <button id = "reservationMobile">Reservation</button>
+                <div id = "facebook2">
+                        <img :src = "facebook">
+                    </div>
+                    <div id = "instagram2">
+                        <img :src = "instagram">
+                    </div>
+                    <div id = "twitter2">
+                        <img :src = "twitter">
+                    </div>
             </div>
         </div>
         
@@ -42,7 +61,39 @@
 </template>
 
 <script>
-
+window.onload = () => {
+    const nav = document.querySelector('#nav');
+    const navDropped = document.querySelector('#navDropped');
+    const navDrop = document.querySelector('#navDrop');
+    
+    
+        nav.addEventListener('click', () => {
+            console.log('you clicked me');
+            if (navDrop.style.display === '') {
+                nav.style.display = '';
+                navDrop.style.display = 'block';
+                navDropped.style.display = 'block';
+            }
+        })
+        navDropped.addEventListener('click', () => {
+            if (navDrop.style.display === 'block') {
+                nav.style.display = "block";
+                navDrop.style.display = '';
+                navDropped.style.display = '';
+            }
+        })
+    }
+    
+    export default {
+        data() {
+        return {
+            facebook: require('../assets/images/facebook.png'),
+            instagram: require('../assets/images/instagram.png'),
+            twitter: require('../assets/images/twitter.png'),
+            
+        }
+    }
+    }
 </script>
 
 <style lang = scss>
@@ -112,8 +163,7 @@ a {
 #main ul {
     left: 25%;
     margin-top: 32px;
-    position: relative;
-    
+    position: relative; 
 }
 #main  ul li {
     text-decoration: none;
@@ -140,25 +190,30 @@ a {
     border-radius: 4px;
     color: #ffffff;
 }
-
 #nav {
-    width: 40px;
-    height: 50px;
-    background-color: black;
+    width: 35px;
+    height: 40px;
     position: absolute;
-    top: 20px;
+    top: 40px;
     left: 90%;
-    display: none;
+    display: none !important;
+    cursor: pointer;
     span {
         position: absolute;
         left: 0;
-            bottom: 0;
+            bottom: 2px;
+            left: -1px;
+            font-size: 12px;
+            font-weight: 800;
+            text-align: center;
         }
 }
+
+
 .navLinks {
-        width: 40px;
-        height: 8px;
-        background-color: #FFFFFF;
+        width: 35px;
+        height: 2px;
+        background-color: #597193;
         position: absolute;
     }
 #link1 {
@@ -167,16 +222,135 @@ a {
         }
 #link2 {
     position: absolute;
-    top: 15px;
+    top: 8px;
 }
 #link3 {
     position: absolute;
-    top: 26px;
+    top: 16px;
 }
     #navDrop {
         display: none;
+        width: 100%;
+        height: 1200px;
+        background-color:#FFFFFF;
+        z-index: 5;
+        overflow: hidden;
+        position: absolute;
+        left: 0;
+        top: 0;
+        ul {
+            position: absolute;
+            top: 70px;
+            left: -50px;
+            z-index: 6;
+            color: black;
+            li {
+                margin-top: 40px;
+                text-align: left;
+                text-transform: uppercase;
+            }
+        }
     }
+    #topDrop {
+        width: 100%;
+        height: 40px;
+        position: absolute;
+        left: 0;
+        top: 0;
+        background-color: #AAC7F0;
+        span:nth-child(1) {
+            position: absolute;
+            top: 5px;
+            left: 40px;
+            font-size: 15px;
+            letter-spacing: 4px;
+            color: #FFFFFF;
+        }
+        span:nth-child(2) {
+            position: absolute;
+            top: 22px;
+            left: 45px;
+            font-size: 9px;
+            letter-spacing: 3px;
+            color: #FFFFFF;
+        }
+        #reservationMobile {
+            width: 200px;
+            height: 40px;
+            background-color: #597193;
+            color: #FFFFFF;
+            border: transparent;
+            position: relative;
+            margin: 0 auto;
+            display: block;
+            cursor: pointer;
+        }
+    }
+    #navDropped {
+    width: 35px;
+    height: 40px;
+    position: absolute;
+    top: 3px;
+    left: 90%;
+    display: none;
+    cursor: pointer;
+    span {
+        position: absolute;
+        left: 0;
+            bottom: 2px;
+            left: -1px;
+            font-size: 12px;
+            font-weight: 800;
+            text-align: center;
+        }
+        #link4 {
+            top: 10px;
+            width: 25px;
+            left: 5px;
+            transform: rotate(-45deg);
+        }
+        #link5 {
+            top: 10px;
+            width: 25px;
+            left: 5px;
+            transform: rotate(45deg);
+        }
+        #link6 {
+            
+            display: none;
+        }
 
+.navLinksDropped {
+        width: 35px;
+        height: 2px;
+        background-color: #597193;
+        position: absolute;
+    }
+}
+    #facebook,
+    #instagram,
+    #twitter {
+        z-index: 6;
+        position: absolute;
+        top: 600px !important;
+    }
+    #facebook {
+        left: 40px !important;
+    }
+    #instagram {
+        left: 90px !important;
+    }
+    #twitter {
+        left: 140px !important;
+    }
+@keyframes hideAndSeek {
+    from {
+        left: 1200px;
+    }
+    to {
+        left: 0;
+    }
+}
 
 @media screen and (max-width: 1460px) {
     
@@ -192,9 +366,167 @@ a {
     #reservation {
         display: none;
     }
+    
     #nav {
-        display: block;
+    width: 35px;
+    height: 40px;
+    position: absolute;
+    top: 40px;
+    left: 90%;
+    display: block !important;
+    cursor: pointer;
+    span {
+        position: absolute;
+        left: 0;
+            bottom: 2px;
+            left: -1px;
+            font-size: 12px;
+            font-weight: 800;
+            text-align: center;
+        }
+}
+.navLinks {
+        width: 35px;
+        height: 2px;
+        background-color: #597193;
+        position: absolute;
     }
+#link1 {
+            position: absolute;
+            top: 0;
+        }
+#link2 {
+    position: absolute;
+    top: 8px;
+}
+#link3 {
+    position: absolute;
+    top: 16px;
+}
+#nav:active {
+#navDrop {
+        animation-name: hideAndSeek;
+        animation-duration: 4s;
+        animation-timing-function: linear;
+    }
+}
+    #navDrop {
+        display: none;
+        width: 100%;
+        height: 1200px;
+        background-color:#FFFFFF;
+        z-index: 5;
+        overflow: hidden;
+        position: absolute;
+        left: 0;
+        top: 0;
+        ul {
+            position: absolute;
+            top: 70px;
+            left: -50px;
+            z-index: 6;
+            color: black;
+            li {
+                margin-top: 40px;
+                text-align: left;
+                text-transform: uppercase;
+                display: block !important;
+            }
+        }
+    }
+    #topDrop {
+        width: 100%;
+        height: 40px;
+        position: absolute;
+        left: 0;
+        top: 0;
+        background-color: #AAC7F0;
+        span:nth-child(1) {
+            position: absolute;
+            top: 5px;
+            left: 40px;
+            font-size: 15px;
+            letter-spacing: 4px;
+            color: #FFFFFF;
+        }
+        span:nth-child(2) {
+            position: absolute;
+            top: 22px;
+            left: 45px;
+            font-size: 9px;
+            letter-spacing: 3px;
+            color: #FFFFFF;
+        }
+        #reservationMobile {
+            width: 200px;
+            height: 40px;
+            background-color: #597193;
+            color: #FFFFFF;
+            border: transparent;
+            position: relative;
+            margin: 0 auto;
+            display: block;
+            cursor: pointer;
+        }
+    }
+    #navDropped {
+    width: 35px;
+    height: 40px;
+    position: absolute;
+    top: 3px;
+    left: 90%;
+    display: none;
+    cursor: pointer;
+    span {
+        position: absolute;
+        left: 0;
+            bottom: 2px;
+            left: -1px;
+            font-size: 12px;
+            font-weight: 800;
+            text-align: center;
+        }
+        #link4 {
+            top: 10px;
+            width: 25px;
+            left: 5px;
+            transform: rotate(-45deg);
+        }
+        #link5 {
+            top: 10px;
+            width: 25px;
+            left: 5px;
+            transform: rotate(45deg);
+        }
+        #link6 {
+            
+            display: none;
+        }
+
+.navLinksDropped {
+        width: 35px;
+        height: 2px;
+        background-color: #597193;
+        position: absolute;
+    }
+}
+    #facebook2,
+    #instagram2,
+    #twitter2 {
+        z-index: 6;
+        position: absolute;
+        top: 600px !important;
+    }
+    #facebook2 {
+        left: 40px !important;
+    }
+    #instagram2 {
+        left: 90px !important;
+    }
+    #twitter2 {
+        left: 140px !important;
+    }
+
 }
 
 

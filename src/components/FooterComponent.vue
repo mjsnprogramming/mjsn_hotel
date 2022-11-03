@@ -85,7 +85,7 @@ $openSans: "Open Sans", sans-serif;
         border-radius: 4px;
         color: #D9D9D9;
         position: absolute;
-        top: 116px;
+        top: 116px !important;
         box-sizing: border-box;
         cursor: pointer;
 }
@@ -229,21 +229,21 @@ $openSans: "Open Sans", sans-serif;
 }
 #facebook {
     @include footerIcons;
-    left: 863.01px;
+    left: 863.01px !important;
     img {
         @include imgPosition;
     }
 }
 #instagram {
     @include footerIcons;
-    left: 908.98px;
+    left: 908.98px !important;
     img {
         @include imgPosition;
     }
 }
 #twitter {
     @include footerIcons;
-    left: 954.95px;
+    left: 954.95px !important;
     img {
         @include imgPosition;
     }
