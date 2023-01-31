@@ -516,6 +516,7 @@ a {
         z-index: 6;
         position: absolute;
         top: 600px !important;
+        cursor: pointer;
     }
     #facebook2 {
         left: 40px !important;
@@ -527,6 +528,11 @@ a {
         left: 140px !important;
     }
 
+}
+@media screen and (max-width: 360px) {
+    #reservationMobile {
+        width: 100px !important;
+    }    
 }
 
 

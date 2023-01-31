@@ -33,8 +33,7 @@
                     template.</p>
             </div>
             <div id = "footerBottom">
-                &copy;
-                <span>HOTEL Official 2022</span>
+                <span>&copy; HOTEL Official 2022</span>
                 <ul>
                     <li>Privacy policy</li>
                     <li>Cookies</li>
@@ -254,24 +253,214 @@ $openSans: "Open Sans", sans-serif;
     background-color: #B1BED0;
     color: rgba(0, 0, 0, 0.42);
     position: absolute;
-    bottom: 0;
+    top: 500px !important;
     font-family: "Work Sans", sans-serif;
     font-weight: 500;
     font-size: 18px;
-    line-height: 26px;
+    
     span {
         position: absolute;
-        top: 17px;
-        left: 165px;
+        top: 40px !important;
+        left: 10% !important;
     }
     ul li{
         display: inline-block;
         margin-left: 20px;
         position: relative;
-        top: -25px;
-        left: 1075px;
+        left: 70% !important;
+        top: 0!important;
         text-decoration: none;
         cursor: pointer;
     }
 }
+@media screen and (max-width: 1310px) {
+    #footerMain {
+        width: 600px;
+        height: 800px;
+        p:nth-child(2) {
+            left: 150px;
+        }
+        span:nth-child(3) {
+            left: 150px;
+            top: 270px;
+        }
+        img:nth-child(4) {
+            left: 150px;
+            top: 320px;
+        }
+        span:nth-child(5) {
+            left: 180px;
+            top: 315px;
+        }
+        img:nth-child(6) {
+            left: 150px;
+            top: 365px;
+        }
+        span:nth-child(7) {
+            left: 180px;
+            top: 358px;
+        }
+        img:nth-child(8) {
+            left: 150px;
+            top: 405px;
+        }
+        span:nth-child(9) {
+            left: 180px;
+            top: 397px;
+        }
+        span:nth-child(10) {
+            left: 150px;
+            top: 500px;
+        }
+        p:nth-child(14) {
+            left: 150px;
+            top: 580px;
+        }
+        #facebook {
+            left: 150px !important;
+            top: 540px !important;
+        }
+        #instagram {
+            left: 200px !important;
+            top: 540px !important;
+        }
+        #twitter {
+            left: 250px !important;
+            top: 540px !important;
+        }
+    }
+    #footerLogo {
+        left: 150px;
+    }
+    #footerBottom {
+        top: 1000px !important;
+        span {
+            left: 5% !important;
+        }
+        ul li {
+            left: 60% !important;
+        }
+    }
+}
+@media screen and (max-widtH: 1150px) {
+    #footerMain {
+        top: 800px;
+    }
+    #footerBottom {
+        top: 1700px !important;
+    }
+}
+@media screen and (max-width: 1030px) {
+    #footerBottom {
+        ul li {
+            left: 50% !important;
+        }
+    }
+}
+@media screen and (max-width: 830px) {
+    #footerBottom {
+        ul li {
+            left: 40% !important;
+        }
+    }
+}
+@media screen and (max-width: 700px) {
+    #footerMain {
+        width: 320px;
+        top: 400px;
+        p:nth-child(2) {
+            left: 10px;
+        }
+        span:nth-child(3) {
+            left: 10px;
+            top: 270px;
+        }
+        img:nth-child(4) {
+            left: 10px;
+            top: 320px;
+        }
+        span:nth-child(5) {
+            left: 40px;
+            top: 315px;
+        }
+        img:nth-child(6) {
+            left: 10px;
+            top: 385px;
+        }
+        span:nth-child(7) {
+            left: 40px;
+            top: 378px;
+        }
+        img:nth-child(8) {
+            left: 10px;
+            top: 435px;
+        }
+        span:nth-child(9) {
+            left: 40px;
+            top: 427px;
+        }
+        span:nth-child(10) {
+            left: 10px;
+            top: 500px;
+        }
+        p:nth-child(14) {
+            left: 10px;
+            top: 580px;
+        }
+        #facebook {
+            left: 10px !important;
+            top: 540px !important;
+        }
+        #instagram {
+            left: 60px !important;
+            top: 540px !important;
+        }
+        #twitter {
+            left: 110px !important;
+            top: 540px !important;
+        }
+    }
+    #footerLogo {
+        left: 10px;
+    }
+    }
+    #footerBottom {
+        height: 100px !important;
+        top: 1400px;
+        ul li {
+            left: 10%;
+            top: -25px;
+        }
+        span { 
+            position: relative;
+            left: 35%;
+            top: 70px;
+        }
+    }
+    @media screen and (max-width: 508px) {
+        #footerBottom {
+            ul li {
+                left: 5%;
+                margin-left: 5px;
+            }
+            span {
+                left: 30%;
+            }
+        }
+    }
+    @media screen and (max-width: 360px) {
+        body {
+            overflow-x: hidden;
+        }
+        #footerBottom {
+            ul li {
+                top: -30px !important;
+                left: 40px !important;
+            }
+            span {
+                left: 70px !important;
+                top: 60px !important;
+            }
+        }
+    }
 </style>
