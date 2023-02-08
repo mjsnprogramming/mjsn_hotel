@@ -68,7 +68,6 @@ window.onload = () => {
     
     
         nav.addEventListener('click', () => {
-            console.log('you clicked me');
             if (navDrop.style.display === '') {
                 nav.style.display = '';
                 navDrop.style.display = 'block';
@@ -343,27 +342,18 @@ a {
     #twitter {
         left: 140px !important;
     }
-@keyframes hideAndSeek {
-    from {
-        left: 1200px;
-    }
-    to {
-        left: 0;
-    }
-}
-
 @media screen and (max-width: 1460px) {
-    
     #main {
         width: 100%;
     }
-    #reservation {
-        left: 85%;
+    #reservation,
+    #navDrop {
+        display: none;
     }
 }
+    
 @media screen and (max-width: 913px) {
-    #main ul li,
-    #reservation {
+    #main ul li {
         display: none;
     }
     
@@ -402,13 +392,6 @@ a {
 #link3 {
     position: absolute;
     top: 16px;
-}
-#nav:active {
-#navDrop {
-        animation-name: hideAndSeek;
-        animation-duration: 4s;
-        animation-timing-function: linear;
-    }
 }
     #navDrop {
         display: none;
@@ -530,6 +513,9 @@ a {
 
 }
 @media screen and (max-width: 360px) {
+    #nav {
+        left: 82%;
+    }
     #reservationMobile {
         width: 100px !important;
     }    

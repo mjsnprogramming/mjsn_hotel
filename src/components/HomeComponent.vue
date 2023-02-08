@@ -256,8 +256,10 @@
                 <span>Stay in Touch</span>
                 <p>Signup to receive news and<br>
                    updates from our hotel</p>
-                <input type = "email" id = "email" placeholder = "Enter Your Email Address">
-                <button id = "subscribeButton">subscribe</button>
+                   <label for = "email">
+                        <input type = "email" id = "email" class = "emailSubscribe" placeholder = "Enter Your Email Address">
+                    </label>
+                <button id = "subscribeEmailButton" class = "emailSubmit">subscribe</button>
                 <img :src = "arrowToTopLightBlue" id = "arrowToTopLightBlueSmall1">
                 <img :src = "arrowToTopLightBlue" id = "arrowToTopLightBlueSmall2">
                 <img :src = "arrowToTopLightBlue" id = "arrowToTopLightBlueSmall3">
@@ -678,75 +680,12 @@ p:nth-child(2) {
         top: 7px;
     }
 }
-#marketStatic {
-    width: 208.11px;
-    height: 163px;
-    border-radius: 8px;
-    border: transparent;
-    position: absolute;
-    top: 435px;
-    left: 45%;
-    background-color: #FFFFFF;
-    z-index: 3;
-    #marketStaticHeader {
-        width: 106.08px;
-        height: 18px;
-        background-color: #C9D6E9;
-        border-radius: 15px;
-        position: absolute;
-        top: 14px;
-        left: 15.15px;
-        #marketLittleCircle {
-            width: 5.05px;
-            height: 5px;
-            background-color: #4C6487;
-            position: absolute;
-            top: 7px;
-            left: 8.08px;
-            border-radius: 360px;
-            border: transparent;
-        }
-        span {
-            @include openSans;
-            font-size: 12px;
-            line-height: 50px;
-            color: #4C6487;
-            top: -15px;
-            left: 20.8px;
-        }
-    }
-    #marketChart {
-        width: 170px;
-        height: 36px;
-    }
-    #courseOverview {
-            @include openSans;
-            font-size: 12px;
-            line-height: 14px;
-            color: #101828;
-            position: absolute;
-            top: 42px;
-            left: 15.15px;
-        }
-        ul li {
-            text-decoration: none;
-            display: inline-block;
-            @include openSans;
-            font-size: 10px;
-            position: relative;
-            top: 122px;
-            left: -25.15px;
-            margin-left: 5px;
-            color: #6D7589;
-        }
-}
 #circleBig {
     width: 544.52px;
     height: 600px;
     position: absolute;
     left: 52%;
     top: 99px;
-
     .circleBig {
         width: 540px;
         height: 540px;
@@ -760,7 +699,7 @@ p:nth-child(2) {
     #hotelImg {
         z-index: 2 !important;
         position: absolute;
-        top: 41px;
+        top: 37px;
         left: 125.27px;
         width: 323.28px;
         height: 569px;
@@ -1354,7 +1293,7 @@ p:nth-child(2) {
         #thirdComment {
             position: absolute;
             bottom: 0;
-            left: 799px;
+            left: 760px;
         }
     }
     #blog {
@@ -1429,7 +1368,7 @@ p:nth-child(2) {
             position: relative;
             top: 35px;
         }
-        #email {
+        .emailSubscribe {
             width: 446px;
             height: 45px;
             box-shadow: 0px 2px 12px rgba(52, 52, 52, 0.15);
@@ -1446,7 +1385,7 @@ p:nth-child(2) {
                 color: #A2A2A2;
             }
         }
-        #subscribeButton {
+        .emailSubmit {
             width: 107px;
             height: 49px;
             background: #889CB9;

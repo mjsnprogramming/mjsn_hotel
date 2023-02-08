@@ -94,12 +94,15 @@ $openSans: "Open Sans", sans-serif;
         left:50%;
         transform:translate(-50%, -50%);
 }
+body {
+    margin: 0;
+    padding: 0;
+}
 #footerInfo {
     width: 100%;
-    height: 415px;
+    height: 585px;
     position: absolute;
-    bottom: 0;
-    left: 0;
+    bottom: -200px;
 }
 #footerMain {
     width: 1198px;
@@ -257,21 +260,23 @@ $openSans: "Open Sans", sans-serif;
     font-family: "Work Sans", sans-serif;
     font-weight: 500;
     font-size: 18px;
-    
     span {
-        position: absolute;
-        top: 40px !important;
-        left: 10% !important;
+       display: block;
+       text-align: center;
+       margin-top: 70px;
     }
-    ul li{
-        display: inline-block;
-        margin-left: 20px;
+    ul {
+        text-align: center;
         position: relative;
-        left: 70% !important;
-        top: 0!important;
-        text-decoration: none;
-        cursor: pointer;
+        top: -90px;
+        left: -20px;
+        li {
+            margin-left: 20px;
+            display: inline-block;
+            text-decoration: none;
+            cursor: pointer;
     }
+}
 }
 @media screen and (max-width: 1310px) {
     #footerMain {
@@ -342,7 +347,7 @@ $openSans: "Open Sans", sans-serif;
         }
     }
 }
-@media screen and (max-widtH: 1150px) {
+@media screen and (max-width: 1150px) {
     #footerMain {
         top: 800px;
     }
@@ -353,18 +358,24 @@ $openSans: "Open Sans", sans-serif;
 @media screen and (max-width: 1030px) {
     #footerBottom {
         ul li {
-            left: 50% !important;
+            left: 50%;
         }
     }
 }
 @media screen and (max-width: 830px) {
+    #footerInfo {
+        bottom: 300px;
+    }
     #footerBottom {
         ul li {
-            left: 40% !important;
+            left: 40%;
         }
     }
 }
 @media screen and (max-width: 700px) {
+    #footerInfo {
+        bottom: -100px;
+    }
     #footerMain {
         width: 320px;
         top: 400px;
@@ -427,17 +438,11 @@ $openSans: "Open Sans", sans-serif;
     #footerBottom {
         height: 100px !important;
         top: 1400px;
-        ul li {
-            left: 10%;
-            top: -25px;
-        }
-        span { 
-            position: relative;
-            left: 35%;
-            top: 70px;
-        }
     }
     @media screen and (max-width: 508px) {
+        body {
+            overflow-x: hidden;
+        }
         #footerBottom {
             ul li {
                 left: 5%;

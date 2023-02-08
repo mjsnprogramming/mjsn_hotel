@@ -2,10 +2,6 @@
     #page {
         width: 100%;
     }
-    #marketStatic {
-        top: 465px;
-        left: 42%;
-    }
     #payment {
         left: 90%;
     }
@@ -19,10 +15,6 @@
 @media screen and (max-width: 1150px) {
     #page {
         height: 1410px;
-    }
-    #marketStatic {
-        top: 1116px;
-        left: 50px;
     }
     #circleBig {
         top: 804px;
@@ -100,35 +92,60 @@
     }
     #numbers {
         width: 473px;
+        height: 300px;
         top: 2212px;
+        span:nth-child(1) {
+            left: 40px;
+        }
+        span:nth-child(2) {
+            left: 39px;
+            top: 50px;
+        }
+        hr:nth-child(3) {
+            left: 236px;
+            top: 5px;
+        }
+        span:nth-child(4) {
+            left: 330px;
+        }
+        span:nth-child(5) {
+            left: 313px;
+            top: 50px;
+        }
         hr:nth-child(6) {
             display: none;
         }
         span:nth-child(7) {
-            left: 0;
+            left: 40px;;
             top: 170px;
         }
         span:nth-child(8) {
-            left: 0;
-            top: 240px;
+            left: 39px;
+            top: 220px;
         }
         hr:nth-child(9) {
-            left: 214px;
-            top: 200px;
+            left: 236px;
+            top: 175px;
         }
         span:nth-child(10) {
-            left: 300px;
+            left: 330px;
             top: 170px;
         }
         span:nth-child(11) {
-            left: 300px;
-            top: 240px;
+            left: 313px;
+            top: 220px;
         }
     }
     #history {
         top: 2535px;
         width: 554.5px;
         height: 1046px;
+        span:nth-child(1),
+        p:nth-child(2),
+        p:nth-child(3),
+        #explore {
+            left: 42px;
+        }
         iframe:nth-child(8) {
             top: 523px;
             left: 0;
@@ -158,7 +175,7 @@
     #subscribe {
         top: 3000px;
         width: 800px;
-        #email {
+        .emailSubscribe {
             left: 182px;
             width: 386px;
         }
@@ -170,7 +187,7 @@
         #arrowToTopLightBlueSmall4 {
             left: 760px;
         }
-        #subscribeButton {
+        .emailSubmit {
             left: 568px;
         }
     }
@@ -185,7 +202,6 @@
         height: 796px;
     }
     #circleBig,
-    #marketStatic,
     #payment,
     #circle1,
     #circle2,
@@ -278,14 +294,18 @@
         top: 2550px;
         width: 500px;
         p {
+            top: 50px;
+            line-height: 40px;
             font-size: 30px;
         }
-        #email {
+        .emailSubscribe {
             width: 246px;
-            left: 112px;
+            left: 91px;
+            z-index: 4;
         }
-        #subscribeButton {
-            left: 345px;
+        .emailSubmit {
+            left: 325px;
+            z-index: 4;
         }
         #arrowToTopLightBlueBig1,
         #arrowToTopLightBlueBig2,
@@ -396,7 +416,7 @@
             font-size: 25px;
             line-height: 30px;
         }
-        #email {
+        .emailSubscribe {
             width: 50%;
             top: 185px;
             left: 62px;
@@ -404,7 +424,7 @@
         #email::placeholder {
             font-size: 11px !important;
         }
-        #subscribeButton {
+        .emailSubmit {
             top: 185px;
             left: 60%;
         } 
