@@ -431,6 +431,11 @@
     }
 }
 @media screen and (max-width: 360px) {
+    body {
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+    }
     #page {
         p:nth-child(1) {
             font-size: 25px;
@@ -458,12 +463,6 @@
     #checkOut,
     #rooms {
         width: 200px;
-    }
-    #checkInLabel,
-    #checkOutLabel,
-    #roomsLabel,
-    #availabilitySubmit {
-        left: 40px !important;
     }
     #services {
         width: 320px;
