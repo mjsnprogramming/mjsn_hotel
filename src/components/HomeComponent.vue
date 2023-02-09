@@ -597,7 +597,7 @@ p:nth-child(2) {
     top: 393px;
     font-family: "average-sans", sans-serif;
     font-weight: 400;
-    size: 18px;
+    font-size: 18px;
     line-height: 28px;
     letter-spacing: 2%;
     color: #939393;
@@ -678,6 +678,7 @@ p:nth-child(2) {
         color: #353637;
         left: 242.46px;
         top: 7px;
+        width: 100px;
     }
 }
 #circleBig {

@@ -1,13 +1,15 @@
 <template>
         <div id = "main">
+
             <div id = "logoAndList">
-            <a href = "Home">
-            <div class = "rectangle"></div>
-            <div class = "rectangle"></div>
-            <div class = "rectangle"></div>
-            <span>HOTEL</span>
-            </a>
+                <a href = "Home">
+                    <div class = "rectangle"></div>
+                    <div class = "rectangle"></div>
+                    <div class = "rectangle"></div>
+                    <span>HOTEL</span>
+                </a>
             </div>
+
             <ul>
                 <li><a href = "Home">Home</a></li>
                 <li><a href = "Branch">Branch</a></li>
@@ -25,6 +27,7 @@
                 <div id = "link3" class = "navLinks"></div>
                 <span>MENU</span>
             </div>
+
             <div id = "navDrop">
                 <div id = "topDrop">
                     <span>MJSN</span>
@@ -35,8 +38,9 @@
                         <div id = "link5" class = "navLinksDropped"></div>
                         <div id = "link6" class = "navLinksDropped"></div>
                         <span>MENU</span>
-            </div>
+                    </div>
                 </div>
+
                 <ul>
                     <li><a href = "Home">Home</a></li>
                     <li><a href = "Branch">Branch</a></li>
@@ -45,7 +49,8 @@
                     <li><a href = "Pages">Pages</a></li>
                     <li><a href = "Blog">Blog</a></li>
                 </ul>
-                <div id = "facebook2">
+
+                    <div id = "facebook2">
                         <img :src = "facebook">
                     </div>
                     <div id = "instagram2">
@@ -61,6 +66,7 @@
 </template>
 
 <script>
+
 window.onload = () => {
     const nav = document.querySelector('#nav');
     const navDropped = document.querySelector('#navDropped');
@@ -72,6 +78,7 @@ window.onload = () => {
                 nav.style.display = '';
                 navDrop.style.display = 'block';
                 navDropped.style.display = 'block';
+                document.body.style.overflow = "hidden";
             }
         })
         navDropped.addEventListener('click', () => {
@@ -79,6 +86,7 @@ window.onload = () => {
                 nav.style.display = "block";
                 navDrop.style.display = '';
                 navDropped.style.display = '';
+                document.body.style.overflowY = "visible";
             }
         })
     }
@@ -88,8 +96,7 @@ window.onload = () => {
         return {
             facebook: require('../assets/images/facebook.png'),
             instagram: require('../assets/images/instagram.png'),
-            twitter: require('../assets/images/twitter.png'),
-            
+            twitter: require('../assets/images/twitter.png')
         }
     }
     }
@@ -513,11 +520,18 @@ a {
 
 }
 @media screen and (max-width: 360px) {
+    body {
+        overflow-x: hidden !important;
+    }
     #nav {
         left: 82%;
     }
+    #navDropped {
+        left: 85%;
+    }
     #reservationMobile {
         width: 100px !important;
+        left: 15px;
     }    
 }
 
