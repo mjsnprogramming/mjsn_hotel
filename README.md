@@ -1,3 +1,9 @@
+Hotel Landing Page
+
+Live:
+https://fanciful-jalebi-b73dce.netlify.app
+
+
 # mjsn_hotel
 
 ## Project setup
