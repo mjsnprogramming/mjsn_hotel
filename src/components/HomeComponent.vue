@@ -4,11 +4,11 @@
         <HeaderComponent></HeaderComponent>
         <div id = "page">
             <p>Discover a hotel<br> that defines a new <br>dimension of luxury</p>
-            <p>Lorem ipsum is simply dummy text of the printing and <br>typesetting industry.
-                Lorem ipsum has been the industry's<br> standard dummy.
+            <p>Enjoy a seamless stay with premium rooms, exceptional service,<br>
+and everything you need — all in one place.
             </p>
             <div id = "getStarted">
-                <button id = "startedButton">Get Started</button>
+                <button id = "startedButton">Book now</button>
                 <button id = "watchButton"></button>
                 <div id = "insideWatch"></div>
                 <span id = "watchVideo">Watch video</span>
@@ -32,8 +32,8 @@
             </div>
             <div id = "availability">
                 <span>Check Availability</span>
-                <p>It is a long established fact that a reader will be distracted<br>
-                by the readable content of a page</p>
+                <p>Find your perfect stay in seconds — choose your dates,<br>
+check availability, and book with ease.</p>
                 <div id = "hotelImgAvailability">
                 <img :src = "hotel2">
                 </div>
@@ -65,9 +65,9 @@
                 </div>
             </div>
             <div id = "popularRooms">
-                <span>Our Most Popular Room</span>
-                <p>It is a long established fact that a reader will be distracted<br>
-                by the readable content of a page</p>
+                <span>Our Most Popular Rooms</span>
+                <p>Discover our carefully designed rooms — combining comfort,<br>
+style, and everything you need for a perfect stay.</p>
             
             <div id = "deluxe">
                 <img :src = "deluxe" id = "deluxeImg" class = "roomsImg">
@@ -112,35 +112,38 @@
                 <div id = "pickUp" class = "facilities">
                     <span>Pick up & Drop</span>
                     <img :src = "pickUpCar">
-                    <p>It is a long established fact that a reader will be <br>distracted
-                by the readable content of a page</p>
+                    <p>We provide convenient airport transfers to ensure a smooth
+arrival and departure experience.</p>
                 </div>
                 <div id = "parkingSpace" class = "facilities">
                     <span>Parking Space</span>
                     <img :src = "parkingCar">
-                    <p>Lorem Ipsum is simply dummy text of the <br>printing typersetting industry</p>
+                    <p>Secure and spacious parking available for all guests
+throughout your stay.</p>
                 </div>
                 <div id = "roomServices" class = "facilities">
                     <span>Room Services</span>
                     <img :src = "roomServices">
-                    <p>It is a long established fact that a reader will be<br> distracted
-                by the readable content of a page</p>
+                    <p>Enjoy delicious meals and services delivered directly
+to your room anytime you need.</p>
                 </div>
                 <div id = "swimmingPool" class = "facilities">
                     <span>Swimming Pool</span>
                     <img :src = "swimmingPool">
-                    <p>Lorem Ipsum is simply dummy text of the <br>printing typersetting industry</p>
+                    <p>Relax and unwind in our modern swimming pool designed
+for comfort and leisure.</p>
                 </div>
                 <div id = "fibreInternet" class = "facilities">
                     <span>Fibre Internet</span>
                     <img :src = "internet">
-                    <p>It is a long established fact that a reader will be<br> distracted
-                by the readable content of a page</p>
+                    <p>Stay connected with fast and reliable high-speed internet
+available throughout the hotel.</p>
                 </div>
                 <div id = "breakfast" class = "facilities">
                     <span>Breakfast</span>
                     <img :src = "breakfast">
-                    <p>Lorem Ipsum is simply dummy text of the <br>printing typersetting industry</p>
+                    <p>Start your day with a rich and fresh breakfast prepared
+daily by our chefs.</p>
                 </div>
             </div>
             <div id = "numbers">
@@ -158,13 +161,10 @@
             </div>
             <div id = "history">
                 <span>Discover Our History</span>
-                <p>Lorem ipsum is ismply dummy text of the printing and<br>
-                typersetting industry. Lorem Ipsum has been the industry's<br>
-                standard dummy</p>
-                <p>There are many variations of passages of Lorem Ipsum<br>
-                available, but the majority have suffered alteration in some<br>
-                form, by injected humour, or randomised words which don't<br>
-                look even slightly believable</p>
+                <p>Our hotel blends modern comfort with timeless elegance,<br>
+creating a unique experience for every guest.</p>
+                <p>With years of experience in hospitality, we focus on quality,<br>
+attention to detail, and unforgettable stays.</p>
                 <button id = "explore">Explore More</button>
                 <button id = "playVideo"></button>
                 <div id = "insideWatch2"></div>
@@ -177,24 +177,21 @@
             </div>
             <div id = "customers">
                 <span>Our Happy Customers</span>
-                <p>Know about our clients, we are a worldwide corporate brand</p>
+                <p>Trusted by travelers from around the world who value comfort,<br>
+quality, and exceptional service.</p>
                 <div id = "firstComment" class = "comment">
                     <img :src = "warren">
                     <span>Wade Warren</span>
                     <span>Louis Vuitton</span>
-                    <p>Necessary to deliver white glove<br>
-                       fully managed campaigns that surpass<br>
-                       industry benchmarks. Take your career<br>
-                       to next level</p>
+                    <p>Everything was perfectly organized, and the service exceeded<br>
+my expectations. I will definitely come back!</p>
                 </div>
                 <div id = "secondComment" class = "comment">
                     <img :src = "florise">
                     <span>Albert Florise</span>
                     <span>Nintendo</span>
-                    <p>Necessary to deliver white glove<br>
-                       fully managed campgaigns that surpass<br>
-                       industry benchmarks. Take your career<br>
-                       to next level</p>
+                    <p>One of the best stays I've had. Clean, modern, and incredibly<br>
+welcoming from start to finish.</p>
                        <img :src = "arrowToTopDarkBlue" id = "arrowToTopDarkBlueSmall1">
                         <img :src = "arrowToTopDarkBlue" id = "arrowToTopDarkBlueSmall2">
                         <img :src = "arrowToTopDarkBlue" id = "arrowToTopDarkBlueSmall3">
@@ -208,10 +205,8 @@
                     <img :src = "wilson">
                     <span>Wade Warren</span>
                     <span>Louis Vuitton</span>
-                    <p>Necessary to deliver white glove<br>
-                       fully managed campgaigns that surpass<br>
-                       industry benchmarks. Take your career<br>
-                       to next level</p>
+                    <p>A truly premium experience — comfortable rooms, great staff,<br>
+and an amazing atmosphere.</p>
                 </div>
             </div>
             <div id = "blog">
@@ -225,7 +220,8 @@
                     <img :src = "commentMini">
                     <span>2 Comment</span>
                     <span>How To Travel With Map</span>
-                    <p>Lorem Ipsum is simply dummy text of<br> the printing and typersetting industry </p>
+                    <p>Discover tips and inspiration for your next journey,
+from destinations to travel experiences.</p>
                     <span>Read More</span>
                     <img :src = "arrowMini">
                 </div>
@@ -236,7 +232,8 @@
                     <img :src = "commentMini">
                     <span>2 Comment</span>
                     <span>Single Contrast Room</span>
-                    <p>Lorem Ipsum is simply dummy text of<br> the printing and typersetting industry </p>
+                    <p>Discover tips and inspiration for your next journey,
+from destinations to travel experiences.</p>
                     <span>Read More</span>
                     <img :src = "arrowMini">
                 </div>
@@ -247,15 +244,16 @@
                     <img :src = "commentMini">
                     <span>2 Comment</span>
                     <span>Luxury Twin Room</span>
-                    <p>Lorem Ipsum is simply dummy text of<br> the printing and typersetting industry </p>
+                    <p>Discover tips and inspiration for your next journey,
+from destinations to travel experiences.</p>
                     <span>Read More</span>
                     <img :src = "arrowMini">
                 </div>
             </div>
             <div id = "subscribe">
                 <span>Stay in Touch</span>
-                <p>Signup to receive news and<br>
-                   updates from our hotel</p>
+                <p>Subscribe to get exclusive offers, updates,<br>
+and travel inspiration straight to your inbox.</p>
                    <label for = "email">
                         <input type = "email" id = "email" class = "emailSubscribe" placeholder = "Enter Your Email Address">
                     </label>
@@ -582,7 +580,6 @@ a {
     height: 705px;
     background-color: #EAEFF6;
     left: 0;
-    top: 76px;
 p:nth-child(1) {
     left: 10%;
     top: 194px;
